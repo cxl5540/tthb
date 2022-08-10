@@ -1,0 +1,29 @@
+.container .list .item {
+  height: 400rpx;
+  display: inline-block;
+  width: 330rpx ;
+  margin-top: 30rpx;
+}
+.container .list .item > view:nth-child(1) {
+  width: 100%;
+  height: 280rpx;
+}
+.container .list .item > view:nth-child(1) > image {
+  width: 100%;
+  height: 100%;
+}
+.container .list .item > view:nth-child(2) {
+  font-size: 24rpx;
+}
+.container .list .item:nth-child(2n) {
+  float: right;
+}
+.msg {
+  position: fixed;
+  width: 100% !important;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: transparent;
+  color: transparent;
+}

@@ -1,0 +1,8 @@
+<view class="container wh">
+    <view style="margin-top: 30rpx;">会计人员抬头权限管理公司</view>
+    <view class="list">
+        <view class="flex" wx:for="{{list}}" wx:key="*this">
+          <text>{{item.ti}}</text>       
+      </view>
+    </view>
+</view>

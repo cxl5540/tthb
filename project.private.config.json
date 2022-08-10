@@ -1,0 +1,346 @@
+{
+  "setting": {
+    "compileHotReLoad": true,
+    "urlCheck": false
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": 1011
+        },
+        {
+          "name": "发票档案",
+          "pathName": "pages/archives/archives",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商城",
+          "pathName": "pages/shop/shop",
+          "query": "id=1",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "台账下载",
+          "pathName": "pages/act_down/act_down",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "进项抵扣",
+          "pathName": "pages/jingxdk/jingxdk",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "凭证号补录",
+          "pathName": "pages/ping_zhbl/ping_zhbl",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "观看有礼",
+          "pathName": "pages/look_ad/look_ad",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "发票抬头新增",
+          "pathName": "pages/fp_tt_add/fp_tt_add",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "抬头编辑",
+          "pathName": "pages/adress/adress",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "抬头管理部门",
+          "pathName": "pages/fp_tt_part/fp_tt_part",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "金币列表",
+          "pathName": "pages/coin_list/coin_list",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "团队管理",
+          "pathName": "pages/team_set/team_set",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "抬头权限设置",
+          "pathName": "pages/team_set_tt/team_set_tt",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "权限设置",
+          "pathName": "pages/team_set_qx/team_set_qx",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "查看单位",
+          "pathName": "pages/team_set_ck/team_set_ck",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "团队设置",
+          "pathName": "pages/team_tt_sz/team_tt_sz",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发票费用科目维护",
+          "pathName": "pages/mine_kmwh/mine_kmwh",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "电脑版",
+          "pathName": "pages/pc/pc",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "推广有奖",
+          "pathName": "pages/qrcode/qrcode",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "私有化部署",
+          "pathName": "pages/siyhbs/siyhbs",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "系统对接",
+          "pathName": "pages/system_dj/system_dj",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "获取正式版",
+          "pathName": "pages/get_zsb/get_zsb",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品详情",
+          "pathName": "pages/goods_del/goods_del",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "员工邀请码",
+          "pathName": "pages/yg_yaoqm/yg_yqm",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "会计邀请码",
+          "pathName": "pages/kj_yaoqm/kj_yaoqm",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "购买记录",
+          "pathName": "pages/orderlist/orderlist",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "会员购买详情",
+          "pathName": "pages/buydel_hy/buydel_hy",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "加购详情",
+          "pathName": "pages/buydel_jg/buydel_jg",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "企业购买详情",
+          "pathName": "pages/buydel_qy/buydel_qy",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "扫码器购买详情",
+          "pathName": "pages/buydel_smq/buydel_smq",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "会员加购",
+          "pathName": "pages/buy_jg/buy_jg",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "开票记录",
+          "pathName": "pages/kaipiao_list/kaipiao_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "归集录入",
+          "pathName": "pages/jingxdk_lr/jingxdk_lr",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "归集台账列表",
+          "pathName": "pages/jingxdk_list/jingxdk_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "台账详情",
+          "pathName": "pages/jingxdk_del/jingxdk_del",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "台账下载列表",
+          "pathName": "pages/act_list/act_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "文章推荐",
+          "pathName": "pages/news/news",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "红包收益",
+          "pathName": "pages/money_list/money_list",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "开电子发票",
+          "pathName": "pages/kaifapiao_edit/kaifapiao_edit",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "开票详情",
+          "pathName": "pages/kaipiao_del/kaipiao_del",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "手工录入",
+          "pathName": "pages/shoug_lr/shoug_lr",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "ocr原件导入",
+          "pathName": "pages/ocr_yj_edit/ocr_yj_edit",
+          "query": "year=2021&id=1",
+          "scene": null
+        },
+        {
+          "name": "重复录入",
+          "pathName": "pages/repeat_lr/repeat_lr",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "导入列表",
+          "pathName": "pages/daoru_list/daoru_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发票待审核",
+          "pathName": "pages/fapiao_dsh/fapiao_dsh",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发票待补交",
+          "pathName": "pages/fapiao_dbj/fapiao_dbj",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发票待审核详情",
+          "pathName": "pages/fapiao_dsh_del/fapiao_dsh_del",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发票待补交详情",
+          "pathName": "pages/fapiao_dbj_del/fapiao_dbj_del",
+          "query": "id=1&year=2022",
+          "scene": null
+        },
+        {
+          "name": "发票查验详情",
+          "pathName": "pages/fapiao_dsh_pass/fapiao_dsh_pass",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "扫码查重",
+          "pathName": "pages/saoma_del/saoma_del",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单支付",
+          "pathName": "pages/pay/pay",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "拍照",
+          "pathName": "pages/camera/camera",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "扫码器介绍",
+          "pathName": "pages/saoma_pic/saoma_pic",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "projectname": "fapiao",
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+}

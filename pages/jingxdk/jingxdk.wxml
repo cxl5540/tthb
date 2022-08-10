@@ -1,0 +1,23 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container wh">
+  <view class="txt flex" bindtap="stop"> 
+    <view bindtap="jingxdk_lr" ><view><image src="{{tools.img+'jxdk_lr@2x.png'}}"></image>归集录入</view><image src="{{tools.img+'fpda_img_olxz@2x.png'}}"></image></view>
+    <view bindtap="jingxdk_list"><view><image src="{{tools.img+'jxdk_ck@2x.png'}}"></image>查看台账</view><image src="{{tools.img+'fpda_img_dscyj@2x.png'}}"></image></view>
+  </view>
+  <view class="content">
+      <view class="bold">使用说明</view>
+      <view>目前支持计算税额的票据：火车票、飞机票、公路客运票、水运交通客运票据</view>
+      <block>
+        <view>1.航空运输电子客票行程单<text>\n</text> 进项税额=(票价+燃油附加费)-(1+9%)x9% </view>
+      </block>
+      <block>
+        <view>2.铁路车票<text>\n</text>进项税额=票面金额÷(1+9%)x9%</view>
+      </block>
+      <block>
+        <view>3.公路、水路等其它客票<text>\n</text>进项税额=票面金额+(1+3%)x3% </view>
+      </block>
+      <block>
+        <view>其它进行抵扣归集的票据,可以手动录入票据的金额和税额信息。</view>
+      </block>
+  </view>
+</view>

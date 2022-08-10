@@ -1,0 +1,70 @@
+<view class="container wh" >
+  <view class="bold" style="margin-top: 30rpx;">发票详情</view>
+  <view class="inpts">
+    <view>
+        <text>发票详情</text>
+        <input type="text" value="{{type}}" placeholder="请输入票据类型" />
+    </view>
+    <view>
+        <text  class="need">抬头类型</text>
+        <input type="text" disabled/>
+        <view style="position: absolute;left: 25%;margin-left: 40rpx;">
+          <radio-group bindchange="radioChange">
+            <label  wx:for="{{items}}" wx:key="*this">                   
+                <radio  color="#FF9F06" value="{{item.value}}" />{{item.name}}   
+            </label>
+          </radio-group>
+        </view>
+    </view>
+    <view>
+        <text  class="need">发票抬头</text>
+        <input type="text" placeholder="请输入发票抬头" />
+    </view>
+    <view>
+        <text class="need lgzneed">税号</text>
+        <input type="text" placeholder="请输入纳税人识别号" />
+    </view>
+    <view>
+        <text>注册电话</text>
+        <input type="text" placeholder="请输入注册电话" />
+    </view>
+    <view>
+        <text>开户银行</text>
+        <input type="number" placeholder="请输入开户银行" />
+    </view>
+    <view>
+        <text>银行账号</text>
+        <input type="text" placeholder="请输入银行账号" />
+    </view>
+    <view>
+        <text>发票内容</text>
+        <input type="text" placeholder="请输入发票内容" />
+    </view>
+    <view>
+        <text>发票金额</text>
+        <input type="text" placeholder="请输入发票金额" />
+    </view>
+    <view>
+        <text>备注信息</text>
+        <input type="text" placeholder="请输入备注信息" />
+    </view>
+  </view>
+  <view class="bold" style="margin-top: 30rpx;">收件人信息</view>
+  <view class="inpts">
+    <view>
+        <text class="need sgzneed">收件人</text>
+        <input type="text" placeholder="请输入收件人" />
+    </view>
+    <view>
+        <text class="need">电子邮箱</text>
+        <input type="text" placeholder="用于发送电子发票，请仔细填写" />
+    </view>
+    <view>
+        <text class="need">手机号码</text>
+        <input type="text" placeholder="请输入手机号码" />
+    </view>
+  </view>
+  <view class="btn">
+      <view class="wh">提交电子发票</view>
+  </view>
+</view>

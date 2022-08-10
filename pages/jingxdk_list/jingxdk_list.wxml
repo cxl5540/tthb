@@ -1,0 +1,58 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<picker1 id='picker' 
+    initValue='0'
+    items='{{demoPickerSource}}'
+    bind:confirm="_confirmeventtype">
+</picker1>
+<view class="container wh">
+   <view class="hed">
+      <view class="search" style="margin: 30rpx 0;">         
+        <view style="width: 100%;">
+        <image style="width: 32rpx;height: 32rpx;" src="{{tools.img+'fpda_icon_sousuo@2x.png'}}"></image>
+        <input style="width: 85%;" type="text" placeholder="请输入发票代码、号码、报销人进行查询"></input></view>
+      </view>
+      <view class="date">
+        <text>录入时间</text>
+        <picker  bindchange="stdate" fields='month' value="{{st_date}}" mode='date' >
+          <view class="picker">
+            {{st_date}}<image src="{{tools.img+'fpda_icon_rili@2x.png'}}"></image>
+          </view>
+        </picker>
+        ~
+        <picker  bindchange="endate"  fields='month' value="{{en_date}}" mode='date' >
+          <view class="picker">
+            {{en_date}}<image src="{{tools.img+'fpda_icon_rili@2x.png'}}"></image>
+          </view>
+        </picker>
+      </view>
+      <view class="li_t">
+        <image src="{{tools.img+'fpda_icon_data@2x.png'}}"></image>
+        发票共<text  class="bold" style="color:#3FB5A2">3</text>张，合计金额<text class="bold"  style="color:#E00000">￥800.00</text>
+      </view>
+   </view>
+   <view class="list">
+          <scroll-view
+            scroll-y style="width: 100%; height: 400px;"
+            refresher-enabled="{{true}}"
+            refresher-threshold="{{100}}"
+            refresher-default-style="black"
+            refresher-background=""
+            refresher-triggered="{{triggered}}"
+            bindrefresherpulling="onPulling"
+            bindrefresherrefresh="onRefresh"
+      >
+            <view class="item" wx:for="{{list}}" wx:key="*this" bindtap="jingxdk_del">
+              <view class="flex">
+                  <text>{{item.title}}</text>          
+                  <view><image src="{{tools.img+'icon_cuo@2x.png'}}"></image>原件</view>
+              </view>
+              <view>代码：{{item.dm}} <text style="margin-left:10rpx"> 号码：{{item.hm}}</text></view>
+              <view><text>￥</text><text class="bold" style="font-size:36rpx"> {{item.se}}</text>(税额：1) <view>未验真</view></view>
+              <view class="flex">
+                <text>提交人：{{item.tjr}}</text>
+                <text>录入时间：{{item.sj}}</text>
+              </view>
+            </view>
+       </scroll-view>
+   </view>
+</view>

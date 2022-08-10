@@ -1,0 +1,5 @@
+<view class="container">
+  <image bindtap="getwx" style="width: 100%;" mode="widthFix" src="{{qrcode}}"></image>
+</view>
+<view style="color: #666;text-align: center;">长按图片可保存转发海报</view>
+

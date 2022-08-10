@@ -1,0 +1,27 @@
+<wxs src='../../tools.wxs' module="tools"></wxs>
+<ad-custom unit-id="adunit-1bf479293c2df033"></ad-custom>
+<view class="wh container">
+  <view class="list">
+          <scroll-view
+          scroll-y style="width: 100%; height:{{tabHeiaght}}px;"
+            refresher-enabled="{{true}}"
+            refresher-threshold="{{100}}"
+            refresher-default-style="black"
+            refresher-background=""
+            refresher-triggered="{{triggered}}"
+            bindscrolltolower='scrollToLower'
+            bindrefresherrefresh="onRefresh"
+      >
+            <view class="item" wx:for="{{list}}" wx:key="*this" data-id="{{item.id}}" bindtap="detail">            
+                 <view>
+                    <image src="{{tools.pic_url+item.cover}}"></image>
+                 </view> 
+                 <view>{{item.name}}<text style="color:#FF0000;">￥{{item.price}}</text> <text style="color:#FF8C00;">{{item.is_gold_exchange==1?'【可金币兑换】':''}}</text></view>   
+            </view>
+            <view class='data-loading' style="text-align: center;height: 100rpx;">
+               {{is_data?'数据加载中...':'无更多数据...'}}
+            </view> 
+       </scroll-view>
+   </view>
+   <button class="msg" bindtap="getUserProfile" wx:if="{{!uid}}">授权</button>
+</view>

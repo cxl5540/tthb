@@ -1,0 +1,41 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container wh">
+   <view class="list">
+       <view style="color: red;margin: 30rpx 0;">共导入{{total}}张发票，导入成功{{successUp}}张，失败{{failUp}}张。</view>
+          <!-- <scroll-view
+            scroll-y style="width: 100%; height: 400px;"
+            refresher-enabled="{{true}}"
+            refresher-threshold="{{100}}"
+            refresher-default-style="black"
+            refresher-background=""
+            refresher-triggered="{{triggered}}"
+            bindrefresherpulling="onPulling"
+            bindrefresherrefresh="onRefresh"
+      > -->
+            <view class="item" wx:for="{{list}}" wx:key="index" data-item="{{item}}" data-index="{{index}}" bindtap="ocr_yj_lr">            
+              <view class="flex">
+                  <text>{{tools.substr(item.seller_name,15)}}</text>          
+                  <view style="background: #D3F1FF;color:#0097DE"><image src="{{tools.img+'icon_dui@2x.png'}}"></image>原件</view>
+              </view>
+              <view class="flex">
+                  <view><radio  catchtap="radioval" data-index="{{index}}" color="#FF9F06" checked="{{item.checked}}"/></view>
+                  <view class="rt">
+                    <view>代码：{{item.invoice_code}} <text style="margin-left:10rpx"> 号码：{{item.invoice_num}}</text></view>
+                    <view><text>￥</text><text class="bold" style="font-size:36rpx"> {{item.amount_in_figuers}}</text>(税额：{{item.total_tax}})
+                      <view style="{{item.is_verification==1?'background:#EEEEEE;color:#999999E':item.is_verification==2?'background:#E8F9D6;color:#55A500':'background:#FFE6E6;color:#E00000'}}">{{item.is_verification==1?'未验真':item.is_verification==2?'正常':'异常'}}</view>
+                    </view>
+                    <view class="flex">
+                      <text>提交人：{{item.uname}}</text>
+                      <text>导入时间：{{date}}</text>
+                    </view>
+                  </view>
+              </view>             
+            </view>
+       <!-- </scroll-view> -->
+   </view>
+   <view class="btns flex" wx:if="{{successUp}}">
+      <view bindtap="allchcked">{{!checkedall?'全选':'取消全选'}}</view>
+      <view style="width: 237rpx;background: #F24F4F;" bindtap="givup">放弃录入</view>
+      <view style="width: 237rpx;" bindtap="submit">批量录入</view>
+   </view>
+</view>

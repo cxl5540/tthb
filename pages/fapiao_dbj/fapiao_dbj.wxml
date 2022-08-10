@@ -1,0 +1,58 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container wh">
+   <view class="hed">
+      <view class="search">         
+        <view style="width: 100%;">
+        <image style="width: 32rpx;height: 32rpx;" src="{{tools.img+'fpda_icon_sousuo@2x.png'}}"></image>
+        <input style="width: 85%;" type="text" placeholder="请输入发票代码、号码、报销人进行查询"></input></view>
+      </view>
+      <view class="flex" style="background:rgba(255,0,0,0.08);box-sizing: border-box;padding: 20rpx;margin-top: 30rpx;">
+          <text style="color: #E00000 ;">上传发票原件将自动匹配，无法识别请在列表中手动上传。</text>
+          <button style="width: 200rpx;height: 54rpx;background: #F24F4F;color: #fff;line-height: 54rpx;">上传原件</button>   
+        </view>
+      <view class="data_c flex">
+        <view class="date flex">
+        <text>录入时间</text>
+          <picker  bindchange="stdate" fields='month' value="{{st_date}}" mode='date' >
+            <view class="picker">
+              {{st_date}}<image src="{{tools.img+'fpda_icon_rili@2x.png'}}"></image>
+            </view>
+          </picker>
+          ~
+          <picker  bindchange="endate"  fields='month' value="{{en_date}}" mode='date' >
+            <view class="picker">
+              {{en_date}}<image src="{{tools.img+'fpda_icon_rili@2x.png'}}"></image>
+            </view>
+          </picker>
+        </view>
+      </view>
+   </view>
+   <view class="list" style="margin-top: 40rpx;">
+          <scroll-view
+          scroll-y style="width: 100%; height:{{tabHeiaght}}px;"
+            refresher-enabled="{{true}}"
+            refresher-threshold="{{100}}"
+            refresher-default-style="black"
+            refresher-background=""
+            refresher-triggered="{{triggered}}"
+            bindscrolltolower='scrollToLower'
+            bindrefresherrefresh="onRefresh"
+      >
+      <view class="item" wx:for="{{list}}" wx:key="index" bindtap="detail" data-is_verification="{{item.is_verification}}" data-id="{{item.id}}">
+          <view class="flex">
+              <text>{{item.seller_name}}</text>          
+              <view style="{{item.script_path?'background:#D3F1FF;color:#0097DE':'background:#FFE5D1;color:#FF5A00'}}"><image src="{{item.script_path?tools.img+'icon_dui@2x.png':tools.img+'icon_cuo@2x.png'}}"></image>原件</view>
+          </view>
+          <view>代码：{{item.invoice_code}} <text style="margin-left:10rpx"> 号码：{{item.invoice_num}}</text></view>
+          <view><text>￥</text><text class="bold" style="font-size:36rpx;color: red;"> {{item.amount_in_figuers}}</text>(税额：{{item.total_tax}}) <text style="{{item.is_verification==1?'background:#EEEEEE;color:#999999E':item.is_verification==2?'background:#E8F9D6;color:#55A500':'background:#FFE6E6;color:#E00000'}}">{{item.is_verification==1?'未验真':item.is_verification==2?'正常':'异常'}}</text></view>
+          <view class="flex">
+            <text>提交人：{{item.uname}}</text>
+            <text>录入时间：{{tools.getstr(item.create_time,11)}}</text>
+          </view>
+        </view>
+        <view class='data-loading' style="text-align: center;">
+               {{is_data?'数据加载中...':'无更多数据...'}} 
+            </view>
+       </scroll-view>
+   </view>
+</view>

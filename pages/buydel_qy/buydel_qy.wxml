@@ -1,0 +1,56 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container" style="margin-bottom: 200rpx;">
+  <view class="hed flex">
+      <text class="bold">{{info.body}}</text>
+      <view><text>已完成</text></view>
+  </view>
+  <view class="inpts wh">
+    <view>
+          <text class="need">购买版本</text>
+          <input type="text" disabled value="{{info.body}}"  />
+      </view>
+      <view>
+          <text class="need">购买时长</text>
+          <input type="text" disabled value="{{info.purchase_duration+'年'}}"  />
+      </view>
+      <view>
+          <text>会计数</text>
+          <input type="text" disabled value="{{info.finance_number+'人'}}"/>
+      </view>
+      <view>
+          <text>员工数</text>
+          <input type="text" disabled value="{{info.staff_number+'人'}}"/>
+      </view>
+      <view>
+          <text>扫码模块</text>
+          <input type="text" disabled value="{{info.is_open_pc==2?'已开通':'未开通'}}"/>
+      </view>
+      <view>
+          <text>OCR识别</text>
+          <input type="text" disabled value="{{info.is_open_ocr==2?'已开通':'未开通'}}"/>
+      </view>
+      <view>
+          <text>验真查验</text>
+          <input type="text" disabled value="{{info.check_number+'次'}}"/>
+      </view>
+      <text style="display: inline-block;text-align: right;padding: 20rpx 0;width: 94%;">合计：<text style="color: red;font-size:36rpx">¥{{info.total_fee}}</text></text>
+  </view>
+  <view class="wh bold" style="margin: 30rpx auto;">订单信息</view>
+  <view class="inpts wh">
+      <view>
+          <text>订单编号</text>
+          <input disabled type="text" value="{{info.out_trade_no}}" />
+      </view>
+      <view>
+          <text>购买日期</text>
+          <input disabled type="text"  value="{{info.pay_time}}"  />
+      </view>
+      <view>
+          <text>购买人</text>
+          <input disabled type="text"  value="{{info.uname}}" />
+      </view>
+  </view>
+  <view class="concat">
+      <button open-type="contact"><image  src="{{tools.img+'sy_icon_kefu@2x.png'}}"></image>7*24小时在线客服，竭诚为您服务</button>
+  </view>
+</view>

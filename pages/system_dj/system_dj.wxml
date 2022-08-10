@@ -1,0 +1,35 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="top wh">
+    <view class="bold">系统对接</view>
+    <view>
+      通过电子发票查重工具数据接口，可以将已扫描登记的电子发票台账及上传的电子发票原件自动同步到企业的财务软件、OA系统或ERP系统等办公软件中，完成企业内部数据的归一化归档存储。<text>\n</text>数据接口集成开发工作属于专业技术范畴，为保证达到预期效果，建议由单位IT技术部门或软件系统供应商联系我们仅从处理，我们将提供专业的技术指导服务。
+    </view>
+    <view class="flex">
+        <view>
+          <image src="{{tools.img+'xtdj_jdsgzy@2x.png'}}"></image>
+          <text>降低手工工作</text>
+        </view>
+        <view>
+          <image src="{{tools.img+'xtdj_jscfgz@2x.png'}}"></image>
+          <text>减少重复工作</text>
+        </view>
+        <view>
+          <image  src="{{tools.img+'xtdj_jdglkn@2x.png'}}"></image>
+          <text>降低管理困难</text>
+        </view>
+    </view>
+</view>
+<view class="concat wh">
+    <view class="bold">联系我们</view>
+    <view class="help">
+        <view>
+            <image  bindtap="clickImg" src="{{tools.img+'tz2.png'}}"></image>
+            <view>长按二维码添加微信客服</view>
+            <view  style="position: relative;">
+              <image src="{{tools.img+'sy_icon_kefu@2x.png'}}"></image>7*24小时在线客服
+              <button open-type="contact" style="position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;background:transparent;"></button>
+            </view>
+            <view>客服电话：<text>{{tools.phone}}</text><text style="color: #999999;margin-left: 10rpx;" bindtap="phone">(点击拨打)</text></view>
+        </view>
+    </view>
+</view>

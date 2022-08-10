@@ -1,0 +1,29 @@
+<wxs src='../../tools.wxs' module="tools"></wxs>
+<view class="wh container">
+  <image src="{{tools.img+'img_ad.png'}}"></image>
+  <view style="color: #F19149;font-size:30rpx;font-weight: bold;">{{type==1?'每人每天皆可领取一次红包':'每个整点皆可领取一次金币'}}</view>
+  <view class="wh btns">
+    <button bindtap="openVideoAd">{{type==1?'领取红包':'领取金币'}}</button>
+    <button bindtap="back">取消</button>
+  </view>
+</view>
+<view class="model" wx:if="{{show}}">
+    <view class="main">
+          <!-- <image src="{{tools.img+'img_hongbao.png'}}"></image> -->
+          <image src="{{type==1?tools.img+'img_hongbao.png':tools.img+'img_jinbihb.png'}}"></image>
+          <view class="content">
+             <view>恭喜您获得</view>
+             <view wx:if="{{type==1}}">¥<text>0.30</text></view>
+             <view wx:if="{{type==2}}"><text>{{gold_num}}</text>金币</view>
+             <view></view>
+             <view>{{type==1?'红包已自动进入微信钱包':'金币已自动领取'}} </view>
+             <view>详情见个人中心-{{type==1?'红包':'金币'}}收益明细</view>
+             <button> <image  src="{{tools.img+'img_anniu.png'}}" alt=""/> <text  bindtap="mine">进入个人中心</text></button>
+             <image bindtap="close"  src="{{tools.img+'icon_guanbi.png'}}" alt=""/> 
+          </view>
+         
+    </view>
+</view>
+<view style="position: absolute;bottom: 120rpx;width: 100%;">
+    <ad unit-id="adunit-f1289a344e76716d"></ad>
+</view>

@@ -1,0 +1,56 @@
+page {
+  background-color: rgba(47, 140, 125, 0.1);
+}
+.container > .date {
+  height: 88rpx;
+  box-shadow: 0px 0px 15rpx 0px rgba(40, 112, 105, 0.2);
+  border-radius: 10rpx;
+  line-height: 88rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  background: #ffffff;
+  margin: 30rpx 0;
+}
+.container > .date .picker > image {
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: sub;
+  margin-left: 20rpx;
+}
+.container > .list .item {
+  height: 214rpx;
+  border: 1px solid #D2D2D2;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  background: #ffffff;
+  padding: 10rpx 0 0 0;
+}
+.container > .list .item > view {
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.container > .list .item > view:nth-child(1) {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.container > .list .item > view:nth-child(1) > view:nth-child(2) {
+  font-size: 24rpx;
+  width: 100rpx;
+  height: 48rpx;
+  background: #FFE5D1;
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 48rpx;
+}
+.container > .list .item > view:nth-child(3) {
+  justify-content: flex-end;
+}
+.container > .list .item > view:nth-child(3) > button {
+  width: 155rpx;
+  height: 56rpx;
+  background: #3FB5A2;
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 56rpx;
+  color: #ffffff;
+}

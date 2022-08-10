@@ -1,0 +1,89 @@
+.home-swiper {
+  width: 100%;
+  height: 230rpx;
+  position: relative;
+}
+.home-swiper .slide-image {
+  width: 100%;
+  height: 230rpx;
+}
+.home-swiper .wx-swiper-dot {
+  width: 30rpx;
+  height: 6rpx;
+  border-radius: 3rpx;
+}
+.list {
+  background: rgba(241, 145, 73, 0.1);
+  text-align: center;
+  font-size: 24rpx;
+  padding: 10rpx 0;
+}
+.list view {
+  height: 100%;
+  line-height: 70rpx;
+}
+.list view > text {
+  display: inline-block;
+  margin: 0 10rpx;
+}
+.list view > text:nth-child(4) {
+  font-weight: bold;
+  color: #F19149;
+}
+.tools {
+  width: 94%;
+  margin: 30rpx auto;
+}
+.tools > .rt {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.tools > .rt > view {
+  width: 335rpx;
+  height: 110rpx;
+  position: relative;
+}
+.tools > .rt > view > image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tools > .rt > view > text {
+  position: absolute;
+  right: 0;
+  color: var(--w_c);
+  line-height: 100rpx;
+  margin-right: 30rpx;
+  font-size: 32rpx;
+}
+.tools {
+  position: relative;
+}
+.tools button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: transparent;
+  color: transparent;
+}
+.tools > .msg {
+  z-index: 10;
+}
+.model > image {
+  width: 100%;
+  height: 600rpx;
+}
+.add {
+  position: absolute;
+  bottom: 0rpx;
+  right: 20rpx;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 24rpx;
+  padding: 10rpx;
+  border-radius: 3px;
+}

@@ -1,0 +1,102 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mine/mine",
+    "pages/shop/shop",
+    "pages/archives/archives",
+    "components/picker/Picker",
+    "pages/act_down/act_down",
+    "pages/jingxdk/jingxdk",
+    "pages/ping_zhbl/ping_zhbl",
+    "pages/look_ad/look_ad",
+    "pages/fp_tt_add/fp_tt_add",
+    "pages/adress/adress",
+    "pages/fp_tt_part/fp_tt_part",
+    "pages/coin_list/coin_list",
+    "pages/team_set/team_set",
+    "pages/team_set_tt/team_set_tt",
+    "pages/team_set_qx/team_set_qx",
+    "pages/team_set_ck/team_set_ck",
+    "pages/team_tt_sz/team_tt_sz",
+    "pages/mine_kmwh/mine_kmwh",
+    "pages/pc/pc",
+    "pages/qrcode/qrcode",
+    "pages/siyhbs/siyhbs",
+    "pages/system_dj/system_dj",
+    "pages/get_zsb/get_zsb",
+    "pages/goods_del/goods_del",
+    "pages/camera/camera",
+    "pages/yg_yaoqm/yg_yqm",
+    "pages/kj_yaoqm/kj_yaoqm",
+    "pages/orderlist/orderlist",
+    "pages/buydel_hy/buydel_hy",
+    "pages/buydel_jg/buydel_jg",
+    "pages/buydel_smq/buydel_smq",
+    "pages/buydel_qy/buydel_qy",
+    "pages/buy_jg/buy_jg",
+    "pages/shoug_lr/shoug_lr",
+    "pages/kaipiao_list/kaipiao_list",
+    "pages/jingxdk_lr/jingxdk_lr",
+    "pages/jingxdk_list/jingxdk_list",
+    "pages/jingxdk_del/jingxdk_del",
+    "pages/act_list/act_list",
+    "pages/news/news",
+    "pages/kaipiao_list/kaipiao_del/kaipiao_del",
+    "pages/money_list/money_list",
+    "pages/kaifapiao_edit/kaifapiao_edit",
+    "pages/kaipiao_del/kaipiao_del",
+    "pages/ocr_yj_edit/ocr_yj_edit",
+    "pages/repeat_lr/repeat_lr",
+    "pages/daoru_list/daoru_list",
+    "pages/fapiao_dsh/fapiao_dsh",
+    "pages/fapiao_dbj/fapiao_dbj",
+    "pages/fapiao_dsh_del/fapiao_dsh_del",
+    "pages/fapiao_dsh_pass/fapiao_dsh_pass",
+    "pages/fapiao_dbj_del/fapiao_dbj_del",
+    "pages/saoma_del/saoma_del",
+    "pages/pay/pay",
+    "pages/kefu/kefu",
+    "pages/saoma_pic/saoma_pic",
+    "pages/article/article"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "useExtendedLib": {
+    "weui": true
+  },
+  "tabBar": {
+    "selectedColor": "#F19149",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推广助手",
+        "iconPath": "image/nav_home_d@2x.png",
+        "selectedIconPath": "image/nav_home_s.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "好物商城",
+        "iconPath": "image/nav_help_d.png",
+        "selectedIconPath": "image/nav_help_s@2x.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "个人中心",
+        "iconPath": "image/nav_mine_d@2x.png",
+        "selectedIconPath": "image/nav_mine_s@2x.png"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxee8148ea719bea6d"
+  ]
+}

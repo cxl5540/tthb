@@ -1,0 +1,35 @@
+<view class="container wh">
+    <view style="margin-top: 30rpx;">团队参数设置</view>
+    <view class="list">
+        <view style="padding: 0 20rpx;">
+          <view class="flex">
+            <view>
+              <text>自动查验真伪</text>
+            </view>
+            <switch checked="{{zdcy}}"  color="#44C6AD"  bindchange="switch1" />
+          </view>
+          <view class="flex set">
+            <view  class="flex">
+              <text>起始金额：</text>
+              <input type="number" bindinput='inputWacth'  style="{{disable?'color:#999':'color:#44C6AD'}}" disabled="{{disable}}" value="{{money}}"/>
+            </view>
+            <button disabled="{{disable}}" bindtap="submit">保存</button>
+          </view>
+        </view>       
+        <view style="padding: 0 20rpx;">
+            <view class="flex" style="border-bottom: 1px solid #eeeeee;">
+              <text>员工提交时必须上传发票原件</text>
+              <switch checked="{{yj}}"  color="#44C6AD"  bindchange="switch2" />
+            </view>
+            <view class="flex">
+              <text>仅支持上传odf或pdf原件</text>
+              <switch checked="{{pdf}}"  color="#44C6AD"  bindchange="switch3" />
+            </view>
+        </view>
+       
+        <view class="flex">
+          <text>允许员工拍照识别录入</text>
+          <switch checked="{{photo}}"  color="#44C6AD"  bindchange="switch4" />
+        </view>
+    </view>
+</view>

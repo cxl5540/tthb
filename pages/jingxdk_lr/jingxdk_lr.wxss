@@ -1,0 +1,128 @@
+page {
+  background: rgba(47, 140, 125, 0.08);
+  padding-bottom: 200rpx;
+}
+.inpts {
+  background: #ffffff;
+  margin-top: 40rpx;
+  border-radius: 10rpx;
+}
+.inpts > view {
+  display: flex;
+  box-sizing: border-box;
+  padding: 30rpx 20rpx;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+.inpts > view > text {
+  flex: 0.25;
+}
+.inpts > view > icon {
+  position: absolute;
+  left: 25%;
+}
+.inpts > view > picker {
+  position: absolute;
+  right: 20rpx;
+  color: #999999;
+}
+.inpts > view > input {
+  flex: 0.65;
+  position: relative;
+  padding: 0 0 0 40rpx;
+  border-left: 1px solid #E5E5E5;
+}
+.inpts .need {
+  position: relative;
+}
+.inpts .need::after {
+  content: '*';
+  position: absolute;
+  right: 26rpx;
+  top: 0;
+  color: red;
+}
+.inpts .sgzneed::after {
+  right: 50rpx;
+}
+.inpts .lgzneed::after {
+  right: 80rpx;
+}
+.btn {
+  background: #ffffff;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 20rpx 0;
+  z-index: 10;
+}
+.btn > view {
+  height: 72rpx;
+  background: #44C6AD;
+  border-radius: 10rpx;
+  line-height: 72rpx;
+  color: #ffffff;
+  text-align: center;
+}
+.upload {
+  position: relative;
+}
+.upload > view {
+  position: absolute;
+  left: 25%;
+  margin-left: 40rpx;
+}
+.upload > view > view {
+  margin-right: 40rpx;
+}
+.upload > view image {
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.del {
+  color: #0055A4;
+}
+.del > text:nth-last-child(1) {
+  display: inline-block;
+  width: 114rpx;
+  height: 54rpx;
+  background: #F24F4F;
+  border-radius: 10rpx;
+  color: #ffffff;
+  text-align: center;
+  line-height: 54rpx;
+  position: absolute;
+  right: 20rpx;
+}
+.concat {
+  width: 100%;
+  background: #FFFFFF;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 20rpx;
+  z-index: 10;
+}
+.concat > button {
+  height: 72rpx;
+  width: 702rpx !important;
+  margin: auto;
+  border: 1px solid #3FB5A2;
+  border-radius: 10rpx;
+  line-height: 72rpx;
+  color: #3CA897;
+  background: rgba(68, 198, 173, 0.2);
+}
+.concat > button > image {
+  width: 36rpx;
+  height: 36rpx;
+  vertical-align: sub;
+  margin-right: 10rpx;
+}
+.border {
+  border: 1px solid red;
+}

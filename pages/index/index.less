@@ -1,0 +1,97 @@
+.home-swiper{
+  width: 100%;
+  height: 230rpx;
+  position: relative;
+  .slide-image{
+    width: 100%;
+    height: 230rpx;
+  }
+  .wx-swiper-dot{
+    width: 30rpx;
+    height: 6rpx;
+    border-radius: 3rpx;
+  }
+}
+.list{
+  background: rgba(241,145,73,0.1);
+  text-align: center;
+  font-size: 24rpx;
+  padding: 10rpx 0;
+  swiper-item{
+   // height: 30rpx !important;
+  }
+  view{
+    height: 100%;
+    line-height: 70rpx;
+   // padding: 6rpx 0;
+    >text{
+      display: inline-block;
+      margin: 0 10rpx;
+    }
+    >text:nth-child(4){
+      font-weight: bold;
+      color: #F19149;
+    }
+  }
+  
+}
+.tools{
+  width: 94%;
+  margin: 30rpx auto; 
+  >.rt{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    >view{
+      width: 335rpx;
+      height: 110rpx;
+      position: relative;
+      >image{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;top: 0;
+      }
+      >text{
+        position: absolute;
+        right: 0;
+        color: var(--w_c);
+        line-height:100rpx;
+        margin-right: 30rpx;
+        font-size: 32rpx;
+      }
+    }
+  }
+}
+
+  // 授权按钮
+  .tools{
+    position: relative;
+    button{
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background: transparent;
+      color: transparent;
+    }
+    >.msg{
+      z-index: 10;
+    }
+  }
+  .model{
+    >image{
+      width: 100%;
+      height:600rpx;
+    }
+  }
+  .add{
+    position: absolute;
+    bottom:0rpx;
+    right:20rpx;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 24rpx;
+    padding: 10rpx;
+    border-radius: 3px;
+  }

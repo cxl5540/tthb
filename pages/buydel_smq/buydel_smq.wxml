@@ -1,0 +1,71 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container" style="margin-bottom: 200rpx;">
+  <view class="hed flex">
+      <text class="bold">扫码器购买</text>
+      <view><text>已完成</text></view>
+  </view>
+  <view class="content wh">
+    <view class="flex">
+          <image style="width:160rpx;height:160rpx" src="{{tools.img+'hqzsb_img@2x.png'}}"></image>
+          <view>
+              <text>发票归档专用扫码器一</text>
+              <view class="flex">
+                <text class="bold"><text style="font-size: 24rpx;"> ¥</text>198</text>
+                <view>X1</view>
+              </view>
+          </view>
+      </view>
+      <view class="flex" style="background:rgba(196,159,106,0.1);">
+          <image style="width:160rpx;height:160rpx" src="{{tools.img+'hqzsb_img@2x.png'}}"></image>
+          <view>
+              <text>发票归档专用扫码器二</text>
+              <view class="flex">
+                <text class="bold"><text style="font-size: 24rpx;"> ¥</text>168</text>
+                <view>X1</view>
+              </view>
+          </view>
+      </view>
+      <text style="display: inline-block;text-align: right;padding: 20rpx 0;width: 94%;">合计：<text style="color: red;font-size:36rpx">¥99</text></text>
+  </view>
+  <view class="inpts wh">
+    <view>
+          <text class="need">收件地址</text>
+          <input type="text" value="{{1}}"  />
+      </view>
+      <view>
+          <text class="need">收件人</text>
+          <input type="text" value="{{1}}"  />
+      </view>
+      <view>
+          <text>联系电话</text>
+          <input type="text" />
+      </view>
+  </view>
+  <view class="wh bold" style="margin: 30rpx auto;">订单信息</view>
+  <view class="inpts wh">
+      <view>
+          <text>订单编号</text>
+          <input type="text" value="{{1}}" />
+      </view>
+      <view>
+          <text>购买日期</text>
+          <input type="text"  />
+      </view>
+      <view>
+          <text>购买人</text>
+          <input type="text"  />
+      </view>
+      <view>
+          <text>快递单号</text>
+          <input type="text" value="0000000000000000000" />
+          <text bindtap="copy" style="color: #999999;font-size:24rpx">点击复制</text>
+      </view>
+      <view>
+          <text>发货时间</text>
+          <input type="text"  />
+      </view>
+  </view>
+  <view class="concat">
+      <button open-type="contact"><image src="{{tools.img+'sy_icon_kefu@2x.png'}}"></image>7*24小时在线客服，竭诚为您服务</button>
+  </view>
+</view>

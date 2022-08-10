@@ -1,0 +1,45 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container wh">
+  <view class="date flex">
+        <text>导出时间</text>
+        <picker  bindchange="stdate" fields='month' value="{{st_date}}" mode='date' >
+          <view class="picker">
+            {{st_date}}<image src="{{tools.img+'fpda_icon_rili@2x.png'}}"></image>
+          </view>
+        </picker>
+        ~
+        <picker  bindchange="endate"  fields='month' value="{{en_date}}" mode='date' >
+          <view class="picker">
+            {{en_date}}<image src="{{tools.img+'fpda_icon_rili@2x.png'}}"></image>
+          </view>
+        </picker>
+      </view>
+      <view class="list">
+          <scroll-view
+          scroll-y style="width: 100%; height:{{tabHeiaght}}px;"
+            refresher-enabled="{{true}}"
+            refresher-threshold="{{100}}"
+            refresher-default-style="black"
+            refresher-background=""
+            refresher-triggered="{{triggered}}"
+            bindrefresherpulling="onPulling"
+            bindscrolltolower='scrollToLower'
+            bindrefresherrefresh="onRefresh"
+       >
+            <view class="item" wx:for="{{list}}" wx:key="index">
+              <view class="flex">
+                  <text class="bold">{{item.name}}</text>          
+                  <view>已生成</view>
+              </view>
+              <view style="color: #666666;">导出时间：{{item.create_time}}</view>            
+              <view class="flex">
+                  <button data-url="{{item.path}}" bindtap="downloadxl">报表查看</button>
+              </view>
+            </view>
+            <view class='data-loading' style="text-align: center;">
+               {{is_data?'数据加载中...':'无更多数据...'}} 
+            </view>
+       </scroll-view>
+   </view>
+
+</view>

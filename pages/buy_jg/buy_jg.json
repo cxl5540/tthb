@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-stepper": "@vant/weapp/stepper/index"
+  },
+ 
+  "navigationBarTitleText": "加购授权"
+}

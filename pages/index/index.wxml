@@ -1,0 +1,41 @@
+<wxs src='../../tools.wxs' module="tools"></wxs>
+<view class="container">
+  <swiper class="home-swiper" indicator-dots="true" autoplay="true" interval="5000" duration="500" circular="true" indicator-active-color='#FFFFFF' indicator-color='rgba(255,255,255,.5)'>
+    <block wx:for="{{imgList}}" wx:key='*this'>
+      <swiper-item>
+        <image src="{{tools.img+'banner.png'}}" style="width: 100%;height: 250rpx;"></image>
+        <view class="add" bindtap="show">添加小程序</view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="tools w_c">
+    <view class="rt bold">
+      <view data-type="1" bindtap="get_verify">
+        <image src="{{tools.img+'anniu_tthb.png'}}"></image>
+        <text>天天红包</text>
+      </view>
+      <view data-type="2" catchtap="get_verify">
+        <image src="{{tools.img+'anniu_zdjb.png'}}"></image>
+        <text>整点金币</text>
+      </view>
+    </view>
+    <button style="width: 100%;" class="msg" catchtap="getUserProfile" wx:if="{{!uid}}">授权</button>
+  </view>
+  <view class="list" wx:if="{{list.length}}">
+    <swiper class="tab-right" style="height:300rpx;" vertical="true" autoplay="true" circular="true" interval="2000" display-multiple-items='{{list.length<=6?list.length-1:6}}'>
+      <block wx:for="{{list}}" wx:key='*this'>
+        <swiper-item>
+          <view><text>{{item.user_name}}</text><text>{{item.create_time}}</text><text>{{item.remark}}</text><text>{{item.money}}{{item.type==2?'金币':'元'}}</text></view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="wh" style="text-align: center;color: #999999;height: 100rpx;background: #EEEEEE;line-height: 100rpx;border-radius:6px;margin-top: 30rpx;">更多红包玩法敬请期待…</view>
+</view>
+<view style="margin-top: 30rpx;">
+  <ad unit-id="adunit-5e90fa18ff3f1a16"></ad>
+</view>
+<view class="model" wx:if="{{show}}"  bindtap="close">
+   <image src="{{tools.img+'index.png'}}"></image>
+</view>
+<!-- <view class="molde">qq</view> -->

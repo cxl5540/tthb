@@ -1,0 +1,78 @@
+page{
+  background: rgba(47,140,125,0.08);
+}
+.container{
+  padding-bottom: 100rpx;
+ .content{
+  box-sizing: border-box;
+  padding: 20rpx;
+  >.adress{
+    font-size: 24rpx;
+    padding-bottom: 20rpx;
+    border-bottom: 1px solid #eee;
+    >view{
+      width: 90%;
+    }   
+  }
+   >.title{
+     display: flex;
+     align-items: center;
+     font-weight: bold;
+     border-bottom: 1px solid #eee;
+     padding: 20rpx 0;
+     
+     >image{
+       width: 100rpx;
+       height: 100rpx;
+       margin-right: 40rpx;
+     }
+   }
+   >.type_list{
+     margin-top: 20rpx;
+     >view{
+       display: inline-block;
+       margin: 0rpx 30rpx 20rpx 0;
+       padding: 10rpx 20rpx;
+       border-radius: 4rpx;
+       background:#F5F5F5;
+     }
+    
+   }
+ }
+}
+.active{
+  color: red;
+  border: 1px solid red;
+}
+.concat{
+  width: 100%;
+  background: #FFFFFF;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 20rpx;
+  >button{   
+    height: 72rpx;
+    border: 1px solid #3FB5A2;
+    border-radius: 10rpx;
+    line-height: 72rpx;
+    >image{
+      width: 36rpx;
+      height: 36rpx;
+      vertical-align: sub;
+      margin-right: 10rpx;
+    }
+  }
+  >button:nth-child(1){
+    background: rgba(68,198,173,.2);
+    color: #3CA897;
+    width: 339rpx;
+  }
+  >button:nth-child(2){
+    background: rgba(243,159,0,.2);
+    color: #E28500;
+    width: 339rpx;
+    border: 1px solid #F39F00;
+  }
+}

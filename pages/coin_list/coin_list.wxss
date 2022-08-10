@@ -1,0 +1,55 @@
+page {
+  background: #EEEEEE;
+}
+.hed {
+  background: #F19149;
+  padding: 30rpx 20rpx;
+  color: #ffffff;
+}
+.container > .list {
+  background: #ffffff;
+  margin-top: 30rpx;
+}
+.container > .list .item {
+  padding: 0 0 20rpx 0;
+  border-bottom: 1px solid #eee;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+.container > .list .item > view {
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.container > .list .item > view > text:nth-child(2) {
+  color: #F19149;
+}
+.container > .list .item > view:nth-child(1) {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.container > .list .item > view:nth-child(1) > view:nth-child(2) {
+  font-size: 24rpx;
+  width: 100rpx;
+  height: 48rpx;
+  background: #FFE5D1;
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 48rpx;
+}
+.container > .list .item .rt {
+  width: 90%;
+}
+.container > .list .item .rt > view:nth-child(1) {
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+.container > .list .item .rt > view:nth-child(2) {
+  font-size: 24rpx;
+  color: #666666;
+}
+.container > .list .item .rt > view:nth-child(3) {
+  text-align: right;
+}
+.container > .list .item .rt > view:nth-child(3) > text {
+  color: red;
+}

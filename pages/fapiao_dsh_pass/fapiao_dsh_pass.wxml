@@ -1,0 +1,35 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container wh">
+  <view class="bold">增值税电子普通发票</view>
+  <view>
+      <view>
+          <view><text>发票金额</text><text>{{info.invoice_verify_info.TotalAmount}}</text></view>
+          <view><text>税率（%）</text><text>{{info.invoice_verify_info.TaxRate}}</text></view>
+          <view><text>税额</text><text>{{info.invoice_verify_info.TotalTax}}</text></view>
+          <view><text>价税合计</text><text>{{info.invoice_verify_info.AmountInFiguers}}</text></view>
+      </view>
+      <view>
+          <view><text>发票代码</text><text>{{info.invoice_verify_info.InvoiceCode}}</text></view>
+          <view><text>发票号码</text><text>{{info.invoice_verify_info.InvoiceNum}}</text></view>
+          <view><text>开票日期</text><text>{{info.invoice_verify_info.InvoiceDate}}</text></view>
+          <view><text>校验码</text><text>{{info.invoice_verify_info.CheckCode}}</text></view>
+      </view>
+      <view>
+          <view><text>销售方</text><text>{{info.invoice_verify_info.SellerName}}</text></view>
+          <view><text>纳税人识别号</text><text>{{info.invoice_verify_info.SellerRegisterNum}}</text></view>
+          <view><text>地址及电话</text><text>{{info.invoice_verify_info.SellerAddress}}</text></view>
+          <view><text>开户行及账号</text><text>{{info.invoice_verify_info.SellerBank}}</text></view>
+      </view>
+      <view>
+          <view><text>购买方</text><text>{{info.invoice_verify_info.PurchaserName}}</text></view>
+          <view><text>纳税人识别号</text><text>{{info.invoice_verify_info.PurchaserRegisterNum}}</text></view>
+          <view><text>地址及电话</text><text>{{info.invoice_verify_info.PurchaserAddress}}</text></view>
+          <view><text>开户行及账号</text><text>{{info.invoice_verify_info.PurchaserBank}}</text></view>
+      </view>
+      <view class="table">
+          <view><text>货物或应税劳务名称</text><text>规格型号</text><text>单位</text><text>数量</text><text>单价</text><text>金额</text></view>
+          <view wx:for="{{info.invoice_verify_info.CommodityArr}}" wx:key="*this"><text>{{item.tradeName}}</text><text>{{item.typeNo}}</text><text>{{item.unit}}</text><text>{{item.number}}</text><text>{{item.unitPrice}}</text><text>{{item.tradeAmt}}</text></view>
+      </view>
+      <text style="font-size: 24rpx;color: #999999;">注：以上发票信息由第三方发票查验平台返回，若与实际票面不一致，请联系销售方。</text>
+  </view>
+</view>

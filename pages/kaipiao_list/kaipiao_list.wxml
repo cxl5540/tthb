@@ -1,0 +1,13 @@
+<view class="container wh">
+    <view class="item" bindtap="kaipiao_del">
+        <text class="bold">2021-11</text>
+        <view class="flex">
+            <view>
+                <text class="bold">电子发票</text>
+                <view>开票时间：2021-10-13 17:00</view>
+                <view>开票金额：<text>¥980</text></view>
+            </view>
+            <mp-icon icon="arrow" color="#B3B3B3" size="{{15}}"></mp-icon>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,26 @@
+<view class="container wh">
+  <view class="inpts">
+    <view>
+      <text>收件人</text>
+      <input type="text" value="{{formData.name}}" bindinput='inputWacth' data-model="name" placeholder="请输入收件人" />
+    </view>
+    <view>
+      <text>手机号码</text>
+      <input type="number" value="{{formData.tel}}" bindinput='inputWacth' data-model="tel" placeholder="请输入手机号码" />
+    </view>
+    <view>
+      <text>地址</text>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+        <text  wx:if="{{region==''}}">请选择省市区</text>
+        <text  wx:if="{{region!=''}}">{{region[0]}}-{{region[1]}}-{{region[2]}}</text>
+      </picker>
+    </view>
+    <view>
+      <text>详细地址</text>
+      <input type="text" value="{{formData.adress}}" bindinput='inputWacth' data-model="adress" placeholder="请输入小区/楼栋" />
+    </view>
+  </view>
+  <view class="btn">
+    <view class="wh" bindtap="submit">保存</view>
+  </view>
+</view>

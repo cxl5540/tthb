@@ -1,0 +1,38 @@
+.date-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.date-gray-background {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, .5);
+  height: calc(100% - 500rpx);
+}
+
+.date-container {
+  position: absolute;
+  width: 100%;
+  height: 500rpx;
+  /* border: 2rpx solid #ccc;
+  border-radius: 10rpx; */
+  /* box-sizing: bordre-box; */
+  overflow: hidden;
+  background: #fff;
+  bottom:0;
+}
+
+.date-confirm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 20rpx;
+  font-size:28rpx;
+  line-height: 70rpx;
+  color:#60c48e;
+}

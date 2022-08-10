@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mp-icon": "weui-miniprogram/icon/icon"
+  },
+  "navigationBarTitleText": "发票费用科目维护"
+}

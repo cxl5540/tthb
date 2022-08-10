@@ -1,0 +1,29 @@
+var img_url='https://tzzs.toommi.com/data/upload/config/';
+//var img_url='http://192.168.3.14/red_packet/';
+var pic_url='https://tzzs.toommi.com/';
+var phone='13271887283';
+var getstr=function(str,num) {
+  if(str!=undefined){
+		var length=str.length;
+		if(length>num){
+			str=str.substring(0,num)
+    }
+		return str;
+	}
+}
+substr=function(str,num){
+	if(str!=undefined){
+		var length=str.length;
+		if(length>num){
+			str=str.substring(0,num)+"..."
+		}
+		return str;
+	}
+}
+module.exports = {
+  img: img_url,
+  pic_url:pic_url,
+	phone:phone,
+	getstr:getstr,
+	substr:substr
+};

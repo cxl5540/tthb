@@ -1,0 +1,90 @@
+.container {
+  margin-top: 60rpx;
+  text-align: center;
+}
+.container > image {
+  width: 314rpx;
+  height: 212rpx;
+}
+.container .btns {
+  margin-top: 60rpx;
+  text-align: center;
+}
+.container .btns > button {
+  width: 280rpx;
+  height: 80rpx;
+  margin-top: 60rpx;
+  background: #F19149;
+  border-radius: 20rpx;
+  line-height: 80rpx;
+  color: #ffffff;
+}
+.container .btns > button:nth-child(2) {
+  border: 2px solid #F19149;
+  background: #ffffff;
+  color: #F19149;
+}
+.model > .main {
+  position: relative;
+  top: 100rpx;
+}
+.model > .main > image {
+  width: 100%;
+  height: 760rpx;
+}
+.model > .main > .content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  z-index: 10;
+  text-align: center;
+  color: #EB382C;
+}
+.model > .main > .content > view:nth-child(2) {
+  font-weight: bold;
+}
+.model > .main > .content > view:nth-child(2) > text {
+  font-size: 90rpx;
+}
+.model > .main > .content > view:nth-child(3) {
+  width: 328rpx;
+  height: 1px;
+  background: #CE3D2E;
+  margin: auto;
+}
+.model > .main > .content > view:nth-child(4),
+.model > .main > .content > view:nth-child(5) {
+  font-size: 22rpx;
+  margin-top: 10rpx;
+}
+.model > .main > .content > button {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: relative;
+  background-size: cover;
+  background: transparent;
+  margin-top: 120rpx;
+}
+.model > .main > .content > button > image,
+.model > .main > .content > button > text {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.model > .main > .content > button > text {
+  font-weight: bold;
+  color: #EB382C;
+  font-size: 30rpx;
+  z-index: 10;
+}
+.model > .main > .content > image {
+  width: 64rpx;
+  height: 64rpx;
+  position: relative;
+  top: 200rpx;
+}

@@ -1,0 +1,14 @@
+@import'/pages/get_zsb/get_zsb.wxss'
+
+.hed{
+  height: 104rpx;
+}
+.hed > view > text {
+  height:54rpx;
+  background: #3FB5A2;
+  border-radius: 5rpx;
+  color: #ffffff;
+  padding: 10rpx;
+  margin-left: 20rpx;
+}
+

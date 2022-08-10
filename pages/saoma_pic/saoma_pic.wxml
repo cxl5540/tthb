@@ -1,0 +1,17 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view>
+    <view wx:if="{{type==1}}">
+        <image src="{{tools.img+'img_sc1.png'}}" style="width: 100%;" mode='widthFix'></image>
+        <image src="{{tools.img+'img_sc2.png'}}" style="width: 100%;" mode='widthFix'></image>
+        <image src="{{tools.img+'img_sc3.png'}}" style="width: 100%;" mode='widthFix'></image>
+        <image src="{{tools.img+'img_sc4.png'}}" style="width: 100%;" mode='widthFix'></image>
+        <image src="{{tools.img+'img_sc5.png'}}" style="width: 100%;" mode='widthFix'></image>
+    </view>
+    <view wx:if="{{type==2}}">
+        <image src="{{tools.img+'img_zs1.png'}}" style="width: 100%;" mode='widthFix'></image>
+        <image src="{{tools.img+'img_zs2.png'}}" style="width: 100%;" mode='widthFix'></image>
+        <image src="{{tools.img+'img_zs3.png'}}" style="width: 100%;" mode='widthFix'></image>
+        <image src="{{tools.img+'img_zs4.png'}}" style="width: 100%;" mode='widthFix'></image>
+        <image src="{{tools.img+'img_zs5.png'}}" style="width: 100%;" mode='widthFix'></image>
+    </view>
+</view>

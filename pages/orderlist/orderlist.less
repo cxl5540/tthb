@@ -1,0 +1,43 @@
+page{
+  background: #EEEEEE;
+}
+.hed{
+  background: #F19149;
+  padding: 30rpx 20rpx;
+  color: #ffffff;
+}
+.container{
+  >.list{
+    background: #ffffff;
+    margin-top: 30rpx;
+    .item{ 
+      padding: 0 0 0rpx 0;
+      border-bottom: 1px solid #eee;
+      border-radius: 10rpx;
+      >view{
+        box-sizing: border-box;
+        padding: 8rpx 20rpx;
+        >text:nth-child(2){
+          color:red;
+        }
+      }
+      .rt{
+        width: 90%;
+        >view:nth-child(1){
+          font-weight: bold;
+          margin-top: 20rpx;
+        }
+        >view:nth-child(2){
+          font-size: 24rpx;
+          color: #666666;
+        }
+        >view:nth-child(3){
+          text-align: right;
+          >text{
+           color: red;
+          }
+        }
+      }
+    }
+  }
+}

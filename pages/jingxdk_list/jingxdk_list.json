@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "picker1": "../../components/picker/Picker"
+  },
+  "navigationBarTitleText": "归集台账",
+  "pageOrientation": "auto"
+}

@@ -1,0 +1,15 @@
+<view class="container wh">
+  <view>
+    <view>订单编号：{{pay_param.out_trade_no}}</view>
+    <view>¥{{money}}.00</view>
+    <button bindtap="doWxPay">前往微信支付</button>
+  </view>
+  <view>对公转账支付</view>
+  <view>
+      <text>请按如下账户信息进行转账，转账前请仔细核对账户信息，并在转账后及时联系在线客服人员。</text>
+      <view>公司名称: 【重庆托米科技有限公司】</view>
+      <view>银行账户:【500501 004141 0000 1928】</view>
+      <view>开户银行: 【中国建设银行重庆中山路支行】</view>
+      <button open-type="contact">在线客服</button>
+  </view>  
+</view>

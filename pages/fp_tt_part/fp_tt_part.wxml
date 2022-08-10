@@ -1,0 +1,17 @@
+<view class="container wh">
+    <view style="margin-top: 30rpx;"><text class="bold">公司名称</text><text>——{{name}}</text></view>
+    <view class="search">
+      <view><input type="text" bindinput="department_name" placeholder="请输入添加部门名称"></input></view>
+      <view bindtap="add">新增</view>              
+    </view>
+    <view class="list">
+        <view class="item flex" wx:for="{{list}}" wx:key="index"  bindtap="people_list">
+          <view>
+              <text>{{item.name}}</text>
+              <view style="opacity: 0;">已有0人</view>
+          </view>
+          <mp-icon icon="delete" color="#B3B3B3" size="{{25}}" catchtap="del" data-id="{{item.id}}" data-index="{{index}}"></mp-icon>  
+        </view>
+    </view>
+    <view class="wh" style="font-size: 24rpx;color: #999999;margin-top: 20rpx;">小提示：点击部门可以查看该部门已绑定的人员。</view> 
+</view>

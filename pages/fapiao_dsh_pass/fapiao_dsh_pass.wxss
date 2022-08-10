@@ -1,0 +1,50 @@
+.container {
+  padding: 30rpx 0;
+}
+.container > view:nth-child(1) {
+  font-size: 36rpx;
+  color: #F24F4F;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.container > view > view {
+  border-top: 1px solid #eeeeee;
+  padding: 20rpx 0;
+}
+.container > view > view > view {
+  margin: 10rpx 0;
+}
+.container > view > view > view > text {
+  display: inline-block;
+}
+.container > view > view > view > text:nth-child(1) {
+  width: 30%;
+  color: #666666;
+}
+.container > view > view > view > text:nth-child(2) {
+  width: 70%;
+}
+.container > view > .table > view {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.container > view > .table > view > text:nth-child(1) {
+  width: 31%;
+}
+.container > view > .table > view > text:nth-child(2) {
+  width: 25%;
+}
+.container > view > .table > view > text:nth-child(3),
+.container > view > .table > view text:nth-child(4),
+.container > view > .table > view text:nth-child(5),
+.container > view > .table > view text:nth-child(6) {
+  width: 11%;
+}
+.container > view > .table > view:nth-child(odd) {
+  background: rgba(106, 154, 196, 0.1);
+}
+.container > view > .table > view:nth-child(even) {
+  background: rgba(196, 159, 106, 0.1);
+}

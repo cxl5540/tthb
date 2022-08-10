@@ -1,0 +1,15 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="top wh">
+  <view style="border-left: 6rpx solid #44C6AD;">员工端说明</view>
+  <view style="margin:30rpx 0">通过“员工端"绑定加入团队的员工，可自行通过填报报销所需电子发票原件及相关信息。财务人员只需要进行审核即可。</view>
+</view>
+<view class="concat wh">
+  <view style="border-left: 6rpx solid #44C6AD;">员工端绑定步骤</view>
+  <image style="width:292rpx;height:292rpx;display: block;margin:auto;"  bindtap="clickImg"  src="{{tools.img+'yg_qrcode.jpg'}}"></image>
+  <view style="margin:30rpx 0;">
+    <view>1.员工识别上方小程序码进入“员工端”。</view>
+    <view>2.员工输入授权码:【{{code}}】加入团队。</view>
+    <view>3.员工在“员工端”录入提交发票和报销信息。</view>
+  </view>
+  <view style="margin:30rpx 0;color:#999999">小提示：将“员工加入步骤”内容截图发给员工即可!</view>
+</view>

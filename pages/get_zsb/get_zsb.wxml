@@ -1,0 +1,218 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container">
+    <view class="hed wh flex">
+        <text>请选择购买内容</text>
+        <view bindtap="kaifapiao"><text>历史订单，发票申请</text></view>
+    </view>  
+</view>
+<mp-tabs 
+  tabs="{{tabs}}" 
+  activeTab="{{activeTab}}"
+  get_zsb1="{{true}}"
+  swiperClass="weui-tabs-swiper"
+  bindtabclick="onTabCLick"
+  bindchange="onChange_tab"
+  activeClass="tab-bar-title__selected"
+  swiperStyle="height: {{tabHeiaght}}px"
+>
+  <block wx:for="{{tabs}}" wx:key="title">
+    <view class="tab-content wh" wx:if="index==0" slot="tab-content-{{index}}" id="tabsSwiper">
+        <view class="gmqx" wx:if="{{activeTab==0}}"  >
+            <view class="bold" style="border-bottom: 1px solid #eeeeee;padding-bottom: 20rpx;margin-bottom: 20rpx;">购买授权</view>
+            <view class="nums">
+                <view class="flex">
+                  <text>会计数(个)</text>
+                  <van-stepper value="{{kj_num}}" integer min='{{min_kj}}' bind:overlimit="tip_kj" max="10" bind:change="onChange_kj" />
+                  <view>99元/人/年</view>
+                </view>
+            </view>
+            <view class="nums">
+                <view class="flex"  style="background: rgba(106,154,196,0.1);">
+                  <text>员工数(个)</text>
+                  <van-stepper value="{{yg_num}}" min="{{min_yg}}" step="10" bind:overlimit="tip_yg" integer bind:blur='set_ygnum'  bind:change="onChange_yg" />
+                  <view>6元/人/年</view>
+                </view>
+            </view>
+            <view class="nums">
+                <view class="flex"  style="background: rgba(196,159,106,0.1);">
+                  <text>PC电脑端</text>
+                  <label class="radio">
+                    <radio value="150" catchtap="sm_money" color="#FF9F06" checked="{{sm}}"/>电脑端扫码器模块
+                  </label>
+                  <view style="border: none;text-align: center;background: none;">150元/年<text>\n</text>次数不限</view>
+                </view>
+            </view>
+            <view class="nums">
+                <view class="flex"  style="background:rgba(106,154,196,0.1) ;">
+                  <text>OCR识别</text>
+                  <label class="radio">
+                    <radio value="150"  catchtap="ocy_money" color="#FF9F06" checked="{{ocr}}"/>OCR发票识别模块
+                  </label>
+                  <view style="border: none;text-align: center;background: none;">150元/年<text>\n</text>次数不限</view>
+                </view>
+            </view>
+            <view class="nums">
+                <view class="flex"  style="background: rgba(196,159,106,0.1);">
+                  <text>时长(年)</text>
+                  <radio-group bindchange="radioChange">
+                    <label  wx:for="{{items}}" wx:key="index">                   
+                        <radio  color="#FF9F06" value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}   
+                    </label>
+                  </radio-group>
+                  <view bindtap="getqiye" style="color:#0055A4;border: 1px solid #6CB8FB;background: rgba(106,154,196,0.1);">点击获取多<text>\n</text>年购买优惠</view>
+                </view>
+            </view>
+            <view class="cishu">
+                <text style="margin: 20rpx 0;display: block;">真伪查验充值：对接国税商用接口，0.2元/次</text>
+                <view class="flex">
+                  <view wx:for="{{numlist}}" bindtap="change_num" data-index="{{index}}" data-item="{{item}}" wx:key="index" style="background:{{item.checked==true?'rgba(255,159,6,0.2)':'#F9F5F0'}};">
+                    <view>{{item.n}} </view>
+                    <text wx:if="{{item.sale}}" style="color: red;">({{item.sale}})</text>
+                    <image src="{{item.checked==true?tools.img+'hqzsb_s@2x.png':tools.img+'hqzsb_d@2x.png'}}"></image>
+                  </view>
+                </view>
+            </view>           
+        </view>
+        <view class="bbdb" wx:if="{{activeTab==0}}">
+            <view class="bold" style="border-bottom: 1px solid #eeeeee;padding-bottom: 20rpx;margin-bottom: 20rpx;">版本对比</view>
+            <view>
+              <icon class="icon-box-img" type="warn" size="20" color="#C9C9C9"></icon>
+              <text>新用户注册拥有15天试用期，试用期内不限扫描次数，并增送1次真伪查验次数，请客户在试用满意后再行采购产品。</text>
+            </view>
+            <view class="list">
+                <view wx:for="{{list}}" class="flex" wx:key="*this"><view>{{item.o}}</view><view>{{item.t}}</view><view>{{item.th}}</view></view>
+            </view>
+            <view style="font-size: 24rpx;margin-top: 30rpx;">
+              
+            </view>
+        </view>
+        <view class="qiye" wx:if="{{activeTab==1}}">
+          <view class="bold" style="border-bottom: 1px solid #eeeeee;padding-bottom: 20rpx;margin-bottom: 20rpx;">企业套餐</view>
+          <view class="list">
+                <view style="height: 84rpx;overflow: hidden;" wx:for="{{qylist}}" class="flex" wx:key="*this"><view>{{item.o}}</view><view>{{item.t}}</view><view>{{item.th}}</view><view>{{item.f}}</view></view>
+                <view class="flex">
+                  <view>扫码权限</view>
+                  <view wx:for="{{3}}" wx:key="*this" style="height: 42rpx;" >
+                        <image style="width:38rpx;height:38rpx" src="{{tools.img+'hqqyb_yqx@2x.png'}}"></image>
+                  </view>
+                </view>
+                <view class="flex">
+                  <view>OCR识别</view>
+                  <view wx:for="{{3}}" wx:key="*this" style="height: 42rpx;" >
+                        <image style="width:38rpx;height:38rpx" src="{{tools.img+'hqqyb_yqx@2x.png'}}"></image>
+                  </view>
+                </view>
+                <view class="flex zhekou">
+                    <view> <view style="margin-top: 180rpx;">套餐原价<text>\n</text>与折扣</view></view>
+                    <view>
+                        <view>会计端<text>\n</text>99*5+100</view>
+                        <view>员工端<text>\n</text>6*40</view>
+                        <view>电脑端权限<text>\n</text>150*1</view>
+                        <view>OCR识别<text>\n</text>150*1</view>
+                        <view>真伪查验次数<text>\n</text>1500*0.2</view>
+                        <view style="font-size: 25rpx;">合计:<text style="text-decoration: line-through;">1335元</text></view>
+                        <view style="position: relative;">
+                          <image style="position: absolute;width: 100%;height: 100%;position: absolute;left: 0;top: 0;" src="{{tools.img+'hqzsb_bqzk@2x.png'}}"></image>
+                          <view style="width: 100%;position: absolute;">7.4折</view>                                              
+                        </view>
+                    </view>
+                    <view>
+                        <view>会计端<text>\n</text>99*10</view>
+                        <view>员工端<text>\n</text>6*90</view>
+                        <view>电脑端权限<text>\n</text>150*1</view>
+                        <view>OCR识别<text>\n</text>150*1</view>
+                        <view>真伪查验次数<text>\n</text>10000*0.2</view>
+                        <view style="font-size: 25rpx;">合计:<text style="text-decoration: line-through;">3830元</text></view>
+                        <view style="position: relative;">
+                          <image style="position: absolute;width: 100%;height: 100%;position: absolute;left: 0;top: 0;" src="{{tools.img+'hqzsb_bqzk@2x.png'}}"></image>
+                          <view style="width: 100%;position: absolute;">6.8折</view>                                              
+                        </view>
+                    </view>
+                    <view><view style="margin-top: 180rpx;">单独购买价<text>\n</text>>23000元</view></view>
+                </view>
+                <!-- <view class="flex xf"><view>次年续费<text>\n</text>价格</view><view>¥495.00<text>\n</text>(不含真伪查验)</view><view>¥1990.00<text>\n</text>(不含真伪查验)</view><view>¥8990.00<text>\n</text>(含真伪查验)</view></view> -->
+                <view class="flex">
+                  <view>选择套餐</view>
+                  <view wx:for="{{qy_checked}}" wx:key="*this" style="height: 42rpx;" >                                  
+                        <radio  bindtap="qy_check" color="#FF9F06" data-value="{{item}}" data-index="{{index}}" checked="{{item.checked}}"/>           
+                  </view>
+                </view>
+           </view>
+            <!-- <view class="flex">
+              <icon style="margin-bottom: 40rpx;" class="icon-box-img" type="warn" size="20" color="#C9C9C9"></icon>
+              <text style="color: #999999;font-size: 26rpx;">次年续费价格：不增加账号、真伪查验次数前提下续费价格。</text>
+            </view> -->
+        </view>
+        <view class="fysm"  wx:if="{{activeTab==1}}">
+            <view class="bold" style="border-bottom: 1px solid #eeeeee;padding-bottom: 20rpx;margin-bottom: 20rpx;">费用说明</view>
+            <view class="content">
+                <view>1、企业版套餐包含会计标准套餐、尊享套餐和不限量套餐三种套餐形式，使用时间均为1年。</view>
+                <view>2、第二年续费在不增加账号、真伪查验次数的前提下，仅需支付账号费用即可续费。</view>
+                <view>3、除真伪查验需按次计量计费外，其他功能均不计次数，在套餐有效期内可进行使用，若超过套餐有效期需再购买开通。</view>
+                <view>4、若您对套餐有疑问或想要更改套餐内容，或是想要自定义套餐，并部署在自己的服务器上，均可联系客户获取详情。</view>
+                <view style="color: #D07A00 ;">！！！在企业套餐期限内若需更改套餐内容，请联系客服。</view>
+            </view>
+        </view>
+        <view class="smq" wx:if="{{activeTab==2}}">
+            <view class="bold" style="border-bottom: 1px solid #eeeeee;padding-bottom: 20rpx;margin-bottom: 20rpx;">扫码器购买<text style="font-weight: 100;float: right;">点击标题查看详情</text></view>
+            <view class="content">
+                <view class="flex">
+                  <radio  bindtap="smq_check" data-type="1" color="#FF9F06" checked="{{smq[0].checked}}"/>
+                    <image style="width:160rpx;height:160rpx" src="{{tools.img+'smq1.png'}}"></image>
+                    <view style="margin-left: 20rpx;">
+                        <text  data-type="1" catchtap="saoma_pic">手持式二维影像扫描枪<text  style="color: #44C6AD;"> 详情></text></text>
+                        <view class="flex">
+                          <text class="bold"><text style="font-size: 24rpx;"> ¥</text>{{smq[0].money}}</text>
+                          <van-stepper  value="{{smq[0].num}}" bind:change="Change_smq" data-type="1"/>
+                        </view>
+                    </view>
+                </view>
+                <view class="flex"  style="background:rgba(196,159,106,0.1);">
+                  <radio  bindtap="smq_check" data-type="2" color="#FF9F06"  checked="{{smq[1].checked}}"/>
+                    <image style="width:160rpx;height:160rpx" src="{{tools.img+'smq2.png'}}"></image>
+                    <view style="margin-left: 20rpx;">
+                        <text data-type="2" catchtap="saoma_pic">桌面式二维影像平台<text  style="color: #44C6AD;"> 详情></text></text>
+                        <view class="flex">
+                          <text class="bold"><text style="font-size: 24rpx;"> ¥</text>{{smq[1].money}}</text>
+                          <van-stepper  value="{{smq[1].num}}" bind:change="Change_smq" data-type="2"/>
+                        </view>
+                    </view>
+                </view>
+                <view class="msg">
+                  <view>
+                      <text>收件地址</text>
+                      <input type="text" bindinput='inputWacth' data-model="receiving_address" value="{{formData.receiving_address}}" placeholder="请输入收件地址" />
+                  </view>
+                  <view>
+                      <text>收件人</text>
+                      <input type="text" bindinput='inputWacth' data-model="receiving_people" value="{{formData.receiving_people}}" placeholder="请输入收件人" />
+                  </view>
+                  <view>
+                      <text>联系电话</text>
+                      <input type="number" bindinput='inputWacth' data-model="receiving_tel" value="{{formData.receiving_tel}}" placeholder="请输入联系电话" />
+                  </view>
+                </view>
+            </view>
+        </view>
+        <view class="fysm"  wx:if="{{activeTab==2}}">
+            <view class="bold" style="border-bottom: 1px solid #eeeeee;padding-bottom: 20rpx;margin-bottom: 20rpx;">费用说明</view>
+            <view class="content">
+                <view>1、请先开通电脑端扫码器模块，在购买扫码器。</view>
+                <view>2、扫码主要用于配合电脑版查重使用，您还可以使用微信小程序《 电子台账助手》。</view>
+                <view>3、扫码器属软件配套产品，此价格不含账号授权费用 ，单独购买使用可能受使用者产品版本限制，请购买时确认已购买正式版授权。</view>
+                <view>4、本平台售卖的电子产品经过严格的产品质量检验，享受国家规定的三包政策。</view>
+                <view>5、扫码器属于精密电子仪器设备，不恰当的使用方式和使用环境可能影响产品的使用寿命。</view>
+            </view>
+        </view>
+    </view>
+  </block>
+</mp-tabs>
+<view class="order flex">
+    <view>合计：<text>¥{{pay[activeTab]}}</text></view>
+    <view style="position: relative;">
+        <image src="{{tools.img+'sy_icon_kefu@2x.png'}}" style="width:44rpx;height:44rpx"></image>
+        <view>联系客服 </view>
+        <button open-type="contact" style="position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: transparent;"></button>
+    </view>
+    <view bindtap="payorder">立即下单</view>
+</view>

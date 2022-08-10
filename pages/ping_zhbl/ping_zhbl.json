@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "picker1": "../../components/picker/Picker"
+  },
+  "navigationBarTitleText": "凭证号补录",
+  "pageOrientation": "auto"
+}

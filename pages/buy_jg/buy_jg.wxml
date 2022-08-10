@@ -1,0 +1,88 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="hed wh flex">
+    <text>请选择加购内容</text>
+    <view><text>历史订单，发票申请</text></view>
+</view>
+<view class="del">
+    <view class="flex wh">
+        <view>
+            <text>当前版本：企业版</text>
+            <text>当前会计数：3</text>
+            <text>当前验真/识别数：50</text>
+        </view>
+        <view>
+            <text>到期时间：2022-11-22</text>
+            <text>当前员工数：10</text>
+            <text>扫码器模块：已购买</text>
+        </view>
+    </view>
+</view>
+<view class="tab-content wh"> 
+      <view class="gmqx" >
+          <view class="bold" style="border-bottom: 1px solid #eeeeee;padding-bottom: 20rpx;margin-bottom: 20rpx;">加购授权</view>
+          <view class="nums">
+              <view class="flex">
+                <text>会计数(个)</text>
+                <van-stepper value="{{ 1 }}" bind:change="onChange" />
+                <text style="color: red;">¥0</text>
+              </view>
+          </view>
+          <view class="nums">
+              <view class="flex"  style="background: rgba(106,154,196,0.1);">
+                <text>员工数(个)</text>
+                <van-stepper value="{{ 1 }}" bind:change="onChange" />
+                <text style="color: red;">¥0</text>
+              </view>
+          </view>
+          <view class="nums">
+              <view class="flex"  style="background: rgba(196,159,106,0.1);">
+                <text>扫码模块</text>
+                <label class="radio">
+                  <radio value="r1" color="#FF9F06" checked="true"/>电脑端扫码器模块
+                </label>
+                <view style="border: none;text-align: center;background: none;">一口价100元<text>\n</text>永久使用</view>
+              </view>
+          </view>
+          <view class="nums">
+              <view class="flex"  style="background:rgba(106,154,196,0.1) ;">
+                <text>OCR识别</text>
+                <label class="radio">
+                  <radio value="r1" color="#FF9F06" checked="true"/>OCR发票识别模块
+                </label>
+                <view style="border: none;text-align: center;background: none;">一口价100元<text>\n</text>永久使用</view>
+              </view>
+          </view>
+          <view class="cishu">
+              <text style="margin: 20rpx 0;display: block;">请选择真伪查验别数：</text>
+              <view class="flex">
+                <view wx:for="{{numlist}}" wx:key="*this" style="background:{{item.checked==true?'rgba(255,159,6,0.2)':'#F9F5F0'}};">
+                  <view>{{item.n}} </view>
+                  <text wx:if="{{item.sale}}" style="color: red;">({{item.sale}})</text>
+                  <image src="{{item.checked==true?tools.img+'hqzsb_s@2x.png':tools.img+'hqzsb_d@2x.png'}}"></image>
+                </view>
+              </view>
+          </view>           
+      </view>
+      <view class="fysm" >
+            <view class="bold" style="border-bottom: 1px solid #eeeeee;padding-bottom: 20rpx;margin-bottom: 20rpx;">费用说明</view>
+            <view class="buy_jg_fysm">
+                 <text>当前单位未购买授权或授权已到期,不能单独增购授权,如需获取授权,点击购买会员/企业套餐，也可以联系在线客服。</text>
+                 <view bindtap="get_zsb">去购买会员/企业套餐</view>
+            </view>
+            <view class="content">
+                <view>1、已获取正式授权且授权未到期的单位可以增购账号，其他情况请直接购买会员/企业套餐即可。</view>
+                <view>2、购买授权后需要增购账号的，授权到期日期与首次购买或续费时到期日期—致。</view>
+                <view>3、每个计费周期(按年)结束后，当年赠送的真伪查真/识别次数自动清零。</view>
+                <view>4、加购授权为原价购买，若需其他计算请联系客服。</view>
+            </view>
+        </view>
+</view>
+<view class="order flex">
+    <view>合计：<text>¥366</text></view>
+    <view style="position: relative;">
+        <image src="{{tools.img+'sy_icon_kefu@2x.png'}}" style="width:44rpx;height:44rpx"></image>
+        <button class="contact_btn" open-type="contact">客服</button>
+    </view>
+    <view>立即下单</view>
+</view>
+

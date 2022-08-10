@@ -1,0 +1,201 @@
+<wxs src='../../tools.wxs' module="tools"></wxs>
+<view class="container">
+    <view class="inpts">
+        <view>
+            <text>票据类型</text>
+            <input disabled  style="{{check&&invoice_info.invoice_type!==passdata.InvoiceType?'color:red':''}}" type="text" value="{{invoice_info.invoice_type}}" />
+            <icon  wx:if="{{check&&invoice_info.invoice_type!==passdata.InvoiceType}}"  class=".icon"  color="red" type="clear" size="20"/>
+        </view>
+        <view wx:if="{{check&&invoice_info.invoice_type!==passdata.InvoiceType}}">
+            <text style="opacity: 0;">票据类型</text>
+            <input disabled type="text" value="{{passdata.InvoiceType}}" />
+            <icon type="success" size="20"/>
+        </view>
+        <view>
+            <text class="need">发票代码</text>
+            <input type="text" style="{{check&&invoice_info.invoice_code!==passdata.InvoiceCode?'color:red':''}}" disabled value="{{invoice_info.invoice_code}}" disabled  />
+            <icon  wx:if="{{check&&invoice_info.invoice_code!==passdata.InvoiceCode}}"  class=".icon"  color="red" type="clear" size="20"/>
+        </view>
+        <view  wx:if="{{check&&invoice_info.invoice_code!==passdata.InvoiceCode}}">
+            <text style="opacity: 0;">发票代码</text>
+            <input type="text" disabled value="{{passdata.InvoiceCode}}" />
+            <icon type="success" size="20"/>
+        </view>
+        <view>
+            <text class="need">发票号码</text>
+            <input type="text" style="{{check&&invoice_info.invoice_num!==passdata.InvoiceNum?'color:red':''}}" disabled value="{{invoice_info.invoice_num}}" />
+            <icon  wx:if="{{check&&invoice_info.invoice_num!==passdata.InvoiceNum}}"  class=".icon"  color="red" type="clear" size="20"/>
+        </view>
+        <view wx:if="{{check&&invoice_info.invoice_num!==passdata.InvoiceNum}}" >
+            <text style="opacity: 0;">发票号码</text>
+            <input type="text" disabled value="{{passdata.InvoiceNum}}" />
+            <icon type="success" size="20"/>
+        </view>
+        <view>
+            <text>发票日期</text>
+            <input style="{{check&&invoice_info.invoice_date!==passdata.InvoiceDate?'color:red':''}}" disabled value="{{invoice_info.invoice_date}}" />
+            <icon  wx:if="{{check&&invoice_info.invoice_date!==passdata.InvoiceDate}}"  class=".icon"  color="red" type="clear" size="20"/>
+        </view>
+        <view wx:if="{{check&&invoice_info.invoice_date!==passdata.InvoiceDate}}">
+            <text style="opacity: 0;">发票日期</text>
+            <input disabled value="{{passdata.InvoiceDate}}" />
+            <icon type="success" size="20"/>
+        </view>
+        <view>
+            <text>效验码</text>
+            <input disabled value="{{invoice_info.check_code}}"  style="{{check&&invoice_info.check_code!==passdata.CheckCode?'color:red':''}}"/>
+            <icon  wx:if="{{check&&invoice_info.check_code!==passdata.CheckCode}}"  class=".icon"  color="red" type="clear" size="20"/>
+        </view>
+        <view  wx:if="{{check&&invoice_info.check_code!==passdata.CheckCode}}" >
+            <text style="opacity: 0;">效验码</text>
+            <input style="border-left:none" disabled value="{{passdata.CheckCode}}"  />
+            <icon type="success" size="20"/>
+        </view>
+        <view>
+            <text>发票金额</text>
+            <input disabled value="{{invoice_info.total_amount}}"  style="{{check&&invoice_info.total_amount!==passdata.TotalAmount?'color:red':''}}" />
+            <icon  wx:if="{{check&&invoice_info.total_amount!==passdata.TotalAmount}}" class=".icon"  color="red" type="clear" size="20"/>
+        </view>
+        <view  wx:if="{{check&&invoice_info.total_amount!==passdata.TotalAmount}}" >
+            <text style="opacity: 0;">发票金额</text>
+            <input style="border-left:none" disabled value="{{passdata.TotalAmount}}" />
+            <icon type="success" size="20"/>
+        </view>
+        <view>
+            <text>税率(%)</text>
+            <input disabled value="{{invoice_info.tax_rate}}" style="{{check&&invoice_info.tax_rate!==passdata.TaxRate?'color:red':''}}"/>
+            <icon  wx:if="{{check&&invoice_info.tax_rate!==passdata.TaxRate}}" class=".icon"  color="red" type="clear" size="20"/>
+        </view>
+        <view wx:if="{{check&&invoice_info.tax_rate!==passdata.TaxRate}}">
+            <text style="opacity: 0;">税率(%)</text>
+            <input style="border-left:none"  disabled value="{{passdata.TaxRate}}" />
+            <icon type="success" size="20"/>
+        </view>
+        <view>
+            <text>税额</text>
+            <input disabled value="{{invoice_info.total_tax}}" style="{{check&&invoice_info.total_tax!==passdata.TotalTax?'color:red':''}}"/>
+            <icon  wx:if="{{check&&invoice_info.total_tax!==passdata.TotalTax}}" class=".icon"  color="red" type="clear" size="20"/>
+        </view>
+        <view  wx:if="{{check&&invoice_info.total_tax!==passdata.TotalTax}}">
+            <text style="opacity: 0;">税额</text>
+            <input style="border-left:none"  disabled value="{{passdata.TotalTax}}" />
+            <icon type="success" size="20"/>
+        </view>
+        <view>
+            <text>价税合计</text>
+            <input disabled value="{{invoice_info.amount_in_figuers}}" style="{{check&&invoice_info.amount_in_figuers!==passdata.AmountInFiguers?'color:red':''}}"/>
+            <icon wx:if="{{check&&invoice_info.amount_in_figuers!==passdata.AmountInFiguers}}" class=".icon"  color="red" type="clear" size="20"/>
+        </view>
+        <view wx:if="{{check&&invoice_info.amount_in_figuers!==passdata.AmountInFiguers}}">
+            <text style="opacity: 0;">价税合计</text>
+            <input style="border-left:none" disabled value="{{passdata.AmountInFiguers}}" />
+            <icon type="success" size="20"/>
+        </view>
+        <view>
+            <text>销方名称</text>
+            <input disabled value="{{invoice_info.seller_name}}" style="{{check&&invoice_info.seller_name!==passdata.SellerName?'color:red':''}}"/>
+            <icon  wx:if="{{check&&invoice_info.seller_name!==passdata.SellerName}}" class=".icon"  color="red" type="clear" size="20"/>
+        </view>
+        <view  wx:if="{{check&&invoice_info.seller_name!==passdata.SellerName}}">
+            <text style="opacity: 0;">销方名称</text>
+            <input style="border-left:none" disabled value="{{passdata.SellerName}}" />
+            <icon type="success" size="20"/>
+        </view>
+        <view>
+            <text>销方税号</text>
+            <input disabled value="{{invoice_info.seller_register_num}}" style="{{check&&invoice_info.seller_register_num!==passdata.SellerRegisterNum?'color:red':''}}"/>
+            <icon wx:if="{{check&&invoice_info.seller_register_num!==passdata.SellerRegisterNum}}" class=".icon"  color="red" type="clear" size="20"/>
+        </view>
+        <view wx:if="{{check&&invoice_info.seller_register_num!==passdata.SellerRegisterNum}}">
+            <text style="opacity: 0;">销方税号</text>
+            <input  style="border-left:none" disabled value="{{passdata.SellerRegisterNum}}" />
+            <icon type="success" size="20"/>
+        </view>
+        <view>
+            <text>购方名称</text>
+            <input disabled value="{{invoice_info.purchaser_name}}" style="{{check&&invoice_info.purchaser_name!==passdata.PurchaserName?'color:red':''}}"/>
+            <icon wx:if="{{check&&invoice_info.purchaser_name!==passdata.PurchaserName}}" class=".icon"  color="red" type="clear" size="20"/>
+        </view>
+        <view wx:if="{{check&&invoice_info.purchaser_name!==passdata.PurchaserName}}">
+            <text style="opacity: 0;">购方名称</text>
+            <input  style="border-left:none" disabled value="{{passdata.PurchaserName}}" />
+            <icon type="success" size="20"/>
+        </view>
+        <view>
+            <text>购方税号</text>
+            <input disabled value="{{invoice_info.purchaser_register_num}}" style="{{check&&invoice_info.purchaser_register_num!==passdata.PurchaserRegisterNum?'color:red':''}}" />
+            <icon  wx:if="{{check&&invoice_info.purchaser_register_num!==passdata.PurchaserRegisterNum}}" class=".icon"  color="red" type="clear" size="20"/>
+        </view>
+        <view  wx:if="{{check&&invoice_info.purchaser_register_num!==passdata.PurchaserRegisterNum}}">
+            <text style="opacity: 0;">购方税号</text>
+            <input  style="border-left:none" disabled value="{{passdata.PurchaserRegisterNum}}" />
+            <icon type="success" size="20"/>
+        </view>
+    </view>
+    <view class="inpts">
+        <view class="flex del">
+            <view bindtap="clickImg">发票原件.jpg（点击预览）</view>
+            <text style="background: #CCCCCC;">移除</text>
+        </view>
+    </view>
+    <view class="inpts">
+        <view>
+            <text>报销人员</text>
+            <input disabled value="{{invoice_info.reimbursement_people}}" />
+        </view>
+        <view>
+            <text>报销公司</text>
+            <input disabled value="{{invoice_info.reimbursement_company}}" />
+        </view>
+        <view>
+            <text>报销部门</text>
+            <input disabled value="{{invoice_info.reimbursement_department}}" />
+        </view>
+        <view>
+            <text>报销凭证</text>
+            <input disabled value="{{invoice_info.reimbursement_voucher}}" />
+        </view>
+        <view>
+            <text>项目摘要</text>
+            <input disabled value="{{invoice_info.project_summary}}" />
+        </view>
+        <view>
+            <text>费用类型</text>
+            <input disabled value="{{invoice_info.expense_type}}" />
+        </view>
+        <view>
+            <text>备注</text>
+            <input disabled value="{{invoice_info.manual_remarks}}" />
+        </view>
+        <view>
+            <text>审核意见</text>
+            <input disabled value="{{invoice_info.status_opinion}}" />
+        </view>
+    </view>
+    <view class="inpts">
+        <view class="upload">
+            <text>真伪验真</text>
+            <input disabled />
+            <view class="flex" style="top:22rpx;">
+                <button style="background: #44C6AD;width:173rpx;color:#fff;height:54rpx;line-height:54rpx;z-index: 9;" bindtap="checktrue">查验真伪</button>
+                <text style="{{invoice_info.is_verification==1?'color:#333;margin-left: 60rpx;':invoice_info.is_verification==2?'color: #62BF00;margin-left: 60rpx;':'color:red;margin-left: 60rpx;'}}">{{invoice_info.is_verification==1?'未验真':invoice_info.is_verification==2?'已验真--发票正常':'已验真--发票异常'}} </text>
+            </view>
+        </view>
+        <view>
+            <text>上传人员</text>
+            <input disabled value="{{invoice_info.uname}}" />
+        </view>
+        <view>
+            <text>录入时间</text>
+            <input disabled value="{{invoice_info.create_time}}" />
+        </view>
+    </view>
+    <view class="btn flex" style="box-sizing: border-box;padding: 20rpx;">
+        <view style="background:#F24F4F;width: 237rpx;" bindtap="no_pass">不通过</view>
+        <view style="background:#44C6AD;width: 440rpx;" bindtap="pass">通过</view>
+    </view>
+    <view style="position: fixed;right: 0;top: 140rpx;">
+        <image src="{{invoice_info.is_verification==1?tools.img+'yz_wjy@2x.png':invoice_info.is_verification==2?tools.img+'yz_zc@2x.png':tools.img+'yz_yc@2x.png'}}"  style="width: 280rpx;height: 200rpx;"></image>
+        <!-- <text style="position: absolute;bottom: 60rpx;left: 54rpx;color: #C2C2C2 ;">{{tools.getstr(invoice_info.create_time,11)}}</text> -->
+    </view>
+</view>

@@ -1,0 +1,15 @@
+<view class="container wh">
+    <view style="margin-top: 30rpx;"><text class="bold">维护发票费用科目类型</text></view>
+    <view class="search">
+      <view><input type="text" bindinput="getname" placeholder="请输入新增发票费用类型名称"></input></view>
+      <view bindtap="add">新增</view>              
+    </view>
+    <view class="list">
+        <view class="item flex" wx:for="{{cost_list}}" wx:key="index">
+          <view>
+              <text>{{item.name}}</text>
+          </view>
+          <mp-icon icon="delete" color="#B3B3B3" bindtap="del" data-id="{{item.id}}" data-index="{{index}}" size="{{25}}"></mp-icon>  
+        </view>
+    </view>
+</view>

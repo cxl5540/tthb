@@ -1,0 +1,31 @@
+<view class="hed flex">
+      <text>当前累计收益：150个</text>
+  </view>
+<view class="container wh">
+  <view class="list">
+          <scroll-view
+          scroll-y style="width: 100%; height:{{tabHeiaght}}px;"
+            refresher-enabled="{{true}}"
+            refresher-threshold="{{100}}"
+            refresher-default-style="black"
+            refresher-background=""
+            refresher-triggered="{{triggered}}"
+            bindscrolltolower='scrollToLower'
+            bindrefresherrefresh="onRefresh"
+      >
+            <view class="item" wx:for="{{list}}" wx:key="*this">            
+              <view class="flex">
+                  <text>{{item.a}}</text>          
+                  <text class="bold" style="font-size: 30rpx;">{{item.b}}</text>
+              </view>
+              <view class="flex">
+                  <text style="color: #999999;">{{item.c}}</text>          
+                  <text>{{item.d}}</text>
+              </view>       
+            </view>
+            <view class='data-loading' style="text-align: center;">
+               {{is_data?'数据加载中...':'无更多数据...'}} 
+            </view> 
+       </scroll-view>
+   </view>
+</view>

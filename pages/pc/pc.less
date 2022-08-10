@@ -1,0 +1,101 @@
+page{
+  background: rgba(47,140,125,0.08);
+}
+.top{
+  background: #ffffff;
+  border-radius: 10rpx;
+  margin: 30rpx auto;
+  box-sizing: border-box;
+  padding: 30rpx 20rpx;
+  >view:nth-child(1){
+    border-left: 6rpx solid #5FACF0;
+    padding-left: 20rpx;
+  }
+  >view{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30rpx;
+    >text{
+      display: inline-block;
+      width: 28rpx;
+      height: 28rpx;
+      background: #5FACF0;
+      border-radius: 50%;
+      color: #ffffff;
+      font-size: 24rpx;
+      text-align: center;
+      line-height: 28rpx;
+      margin-top: 8rpx;
+    }
+    >view{
+      display: inline-block;
+      width: 94%;
+    }
+  }
+  >button{
+    width: 450rpx;
+    background: #5FACF0;
+    border-radius: 10rpx;
+    font-size: 28rpx;
+    color: #ffffff;
+    font-weight: 400;
+    height: 64rpx;
+    line-height: 64rpx;
+    display: block;
+    margin: 20rpx auto 0 !important;
+  }
+}
+.msg{
+  background: #ffffff;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  padding: 30rpx 20rpx;
+  >view:nth-child(1){
+    border-left: 6rpx solid #44C6AD;
+    padding-left: 20rpx;
+  }
+  >view{
+    >view{
+      display: flex;
+      box-sizing: border-box;
+      padding: 30rpx 20rpx;
+      border-bottom: 1px solid #eee;
+      >text:nth-last-child(1){
+        display: inline-block;
+        width:200rpx;
+        background: #44C6AD;
+        border-radius: 10rpx;
+        font-size: 28rpx;
+        color: #ffffff;
+        position: absolute;
+        right: 0;
+        text-align: center;
+      }
+      >text{
+        flex: 0.3;
+      }
+      >input{
+       flex: 0.7;
+       position: relative;
+       padding: 0 0 0 40rpx;
+       border-left: 1px solid #E5E5E5;
+      }
+    }
+    >text{
+      color: #999999;
+      font-size: 24rpx;
+    }
+  }
+  >button{
+    width: 450rpx;
+    height: 64rpx;
+    line-height: 64rpx;
+    background: #44C6AD;
+    border-radius: 10rpx;
+    font-size: 28rpx;
+    color: #ffffff;
+    font-weight: 400;
+    display: block;
+    margin: 20rpx auto 0 !important;
+  }
+}

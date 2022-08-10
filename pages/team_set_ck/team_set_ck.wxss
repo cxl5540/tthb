@@ -1,0 +1,11 @@
+page {
+  background: rgba(47, 140, 125, 0.08);
+}
+.list > view {
+  background: #ffffff;
+  color: #000000;
+  box-sizing: border-box;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+}

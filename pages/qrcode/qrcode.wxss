@@ -1,0 +1,2 @@
+/* pages/pc_set/pc_set.wxss */
+@import '../pc/pc.wxss'

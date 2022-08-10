@@ -1,0 +1,49 @@
+page {
+  background: rgba(47, 140, 125, 0.08);
+}
+.inpts {
+  background: #ffffff;
+  margin-top: 40rpx;
+  border-radius: 10rpx;
+}
+.inpts > view {
+  display: flex;
+  box-sizing: border-box;
+  padding: 30rpx 20rpx;
+  border-bottom: 1px solid #eee;
+}
+.inpts > view > text {
+  flex: 0.25;
+}
+.inpts > view > input {
+  flex: 0.75;
+  position: relative;
+  padding: 0 0 0 40rpx;
+  border-left: 1px solid #E5E5E5;
+}
+.inpts .need {
+  position: relative;
+}
+.inpts .need::after {
+  content: '*';
+  position: absolute;
+  right: 26rpx;
+  top: 0;
+  color: red;
+}
+.btn {
+  background: #ffffff;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20rpx 0;
+}
+.btn > view {
+  height: 72rpx;
+  background: #44C6AD;
+  border-radius: 10rpx;
+  line-height: 72rpx;
+  color: #ffffff;
+  text-align: center;
+}

@@ -1,0 +1,23 @@
+<view class="container wh">
+  <view class="inpts">
+    <view>
+        <text class="need">公司名称</text>
+        <input type="text"  bindinput='inputWacth' data-model="name" placeholder="请输入公司名称" />
+    </view>
+    <view>
+        <text class="need">信用代码</text>
+        <input type="text"  bindinput='inputWacth' data-model="register_num" placeholder="请输入统一社会信用代码" />
+    </view>
+    <view>
+        <text>地址及电话</text>
+        <input type="地址及电话"  bindinput='inputWacth' data-model="address" placeholder="请输入地址、电话" />
+    </view>
+    <view>
+        <text>银行及账号</text>
+        <input type="text"  bindinput='inputWacth' data-model="bank" placeholder="请输入银行、账号" />
+    </view>
+  </view>
+  <view class="btn">
+      <view class="wh" bindtap="submit">新增</view>
+  </view>
+</view>

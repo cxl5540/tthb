@@ -1,0 +1,72 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="wh top"  wx:if="{{admin_id==uid}}">
+  <view class="txt flex"> 
+        <view bindtap="kj_yaoqm"><text>邀请会计人员加入</text><image src="{{tools.img+'fpda_img_olxz@2x.png'}}"></image></view>
+        <view bindtap="yg_yaoqm"><text>邀请员工绑定</text><image src="{{tools.img+'fpda_img_dscyj@2x.png'}}"></image></view>
+    </view>
+</view>
+<mp-tabs 
+  tabs="{{tabs}}" 
+  activeTab="{{activeTab}}" 
+  swiperClass="weui-tabs-swiper"
+  bindtabclick="onTabCLick"
+  bindchange="onChange"
+  activeClass="tab-bar-title__selected"
+>
+  <block wx:for="{{tabs}}" wx:key="title">
+    <view class="tab-content wh" wx:if="index==0" slot="tab-content-{{index}}" >
+        <view class="qj_list" wx:if="{{activeTab==0}}">
+            <view>[ 会计人数：{{finance_count}}/{{finance_number}}人 ]</view>
+            <view class="item flex">
+              <view>
+                  <view>
+                    <image style="border-radius: 50%;" src="{{finance_m.head_path}}"></image>                  
+                  </view>
+                  <view>{{finance_m.name}}</view>           
+                  <text style="display: inline-block;text-align: center;">管理员</text>
+              </view>
+              <text class="set" bindtap="set_sz"  wx:if="{{admin_id==uid}}">团队设置</text>
+            </view>
+            <view class="list">
+                <view class="radius"  wx:for="{{finance_list}}" wx:if="{{index!==0}}" wx:key="index">
+                    <view class="i_o"  wx:if="{{admin_id==uid}}"><text bindtap="set_tt">设置抬头权限</text><text bindtap="shift" data-id="{{item.id}}">将管理员转给TA</text><text bindtap="set_qx" data-id="{{item.id}}">设置权限</text></view>
+                    <view class="i_t flex" style="justify-content: start;">
+                      <view>
+                          <view class="hed">
+                            <image src="{{item.head_path}}"></image>
+                          </view>                                     
+                      </view>
+                      <view>
+                        <text class="bold">{{item.name}}</text>
+                        <view>拥有2家单位管理权限<text style="color: #0097DE;margin-left: 10rpx;" bindtap="set_ck">点击查看></text></view>
+                      </view>
+                      <mp-icon icon="delete" wx:if="{{admin_id==uid}}" bindtap="del" data-status="1" data-id="{{item.id}}" data-index="{{index}}" color="#B3B3B3" size="{{25}}"></mp-icon>  
+                    </view>
+                    <view class="i_th"><text style="{{admin_id==uid&&item.is_see==2?'color:#0097DE':'color:#999'}}">查看全部台账</text><text style="{{admin_id==uid&&item.is_export==2?'color:#0097DE':'color:#999'}}">导出台账</text><text style="{{admin_id==uid&&item.is_delete==2?'color:#0097DE':'color:#999'}}">删除本人录入的发票</text></view>
+                </view>
+            </view>
+        </view>
+        <view class="bxr_list" wx:if="{{activeTab==1}}">
+          <view class="search">         
+            <view><image src="{{tools.img+'fpda_icon_sousuo@2x.png'}}"></image><input type="text" value="{{key}}" bindinput="getkey"  confirm-type="search" placeholder="请输入姓名、公司、部门"></input></view>
+          </view>
+          <view style="margin-top: 20rpx;">[ 员工人数：{{staff_count}}/{{staff_number}}人 ]</view>
+          <view class="list">
+            <view class="i_t radius flex" style="justify-content: start;" wx:for="{{staff_list}}" wx:key="index">
+                <view>
+                    <view class="hed">
+                      <image src="{{item.head_path}}"></image>
+                    </view>                                     
+                </view>
+                <view>
+                  <text class="bold">{{item.name}}</text>
+                  <view>{{item.unit}}/{{item.department}}</view>
+                </view>
+                <mp-icon icon="delete" bindtap="del"  data-status="2" data-id="{{item.id}}" data-index="{{index}}"   wx:if="{{admin_id==uid}}" color="#B3B3B3" size="{{25}}"></mp-icon>  
+              </view>           
+          </view>
+        </view>
+    </view>
+  </block>
+
+</mp-tabs>

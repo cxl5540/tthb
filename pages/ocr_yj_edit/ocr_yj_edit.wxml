@@ -1,0 +1,211 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container">
+    <view class="inpts">
+    <view>
+        <text>发票类型</text>
+        <input disabled  value="{{formData.lx}}" style="{{check&&formData.lx!==passdata.lx&&passdata.lx?'color:#ff0000':''}}" placeholder="请选择发票类型"  />
+        <picker  bindchange="choose_type"    data-model="lx" data-type="invoice_type_list"  range="{{info.invoice_type_list}}" >
+            选择
+        </picker>
+        <icon class=".icon"  color="red" type="clear" size="20" wx:if="{{check&&formData.lx!==passdata.lx&&passdata.lx}}"/>
+    </view>
+    <view wx:if="{{check&&formData.lx!==passdata.lx&&passdata.lx}}">
+        <text style="opacity: 0;">发票类型</text>
+        <input style="border-left:none" disabled value="{{passdata.lx}}" />
+        <icon type="success" size="20"/>
+    </view>
+    <view>
+        <text  class="need">发票代码</text>
+        <input bindinput='inputWacth' data-model="dm" style="{{check&&formData.dm!==passdata.dm&&passdata.dm?'color:#ff0000':''}}" value="{{formData.dm}}" type="number" placeholder="请输入发票代码" />
+        <icon  class=".icon"  color="red" type="clear" size="20" wx:if="{{check&&formData.dm!==passdata.dm&&passdata.dm}}"/>
+    </view>
+    <view wx:if="{{check&&formData.dm!==passdata.dm&&passdata.dm}}">
+        <text style="opacity: 0;">发票代码</text>
+        <input style="border-left:none" disabled value="{{passdata.dm}}" />
+        <icon type="success" size="20"/>
+    </view>
+    <view>
+        <text  class="need">发票号码</text>
+        <input bindinput='inputWacth' data-model="hm" style="{{check&&formData.hm!==passdata.hm&&passdata.hm?'color:#ff0000':''}}" value="{{formData.hm}}" type="number" placeholder="请输入发票号码" />
+        <icon  class=".icon"  color="red" type="clear" size="20" wx:if="{{check&&formData.hm!==passdata.hm&&passdata.hm}}"/>
+    </view>
+    <view wx:if="{{check&&formData.hm!==passdata.hm&&passdata.hm}}">
+        <text style="opacity: 0;">发票号码</text>
+        <input style="border-left:none" disabled value="{{passdata.hm}}" />
+        <icon type="success" size="20"/>
+    </view>
+    <view>
+        <text  class="need" >发票日期</text>
+        <input value="{{st_date}}"  style="{{check&&st_date!==passdata.st_date&&passdata.st_date?'color:#ff0000':''}}" data-model="date" disabled  placeholder="请选择发票日期" />
+        <picker  bindchange="stdate"  value="{{st_date}}" value="{{index}}"   mode='date'>
+            选择
+        </picker>
+        <icon  class=".icon"  color="red" type="clear" size="20" wx:if="{{check&&st_date!==passdata.st_date&&passdata.st_date}}"/>
+    </view>
+    <view wx:if="{{check&&st_date!==passdata.st_date&&passdata.st_date}}">
+        <text style="opacity: 0;">发票日期</text>
+        <input style="border-left:none" disabled value="{{passdata.st_date}}" />
+        <icon type="success" size="20"/>
+    </view>
+    <view>
+        <text class="need sgzneed">效验码</text>
+        <input type="number" bindinput='inputWacth' data-model="jym" style="{{check&&formData.jym!==passdata.jym&&passdata.jym?'color:#ff0000':''}}" value="{{formData.jym}}" placeholder="请输入效验码后六位" />
+        <icon  class=".icon"  color="red" type="clear" size="20"  wx:if="{{check&&formData.jym!==passdata.jym&&passdata.jym}}"/>
+    </view>
+    <view wx:if="{{check&&formData.jym!==passdata.jym&&passdata.jym}}">
+        <text style="opacity: 0;">效验码</text>
+        <input style="border-left:none" disabled value="{{passdata.jym}}" />
+        <icon type="success" size="20"/>
+    </view>
+    <view>
+        <text  class="need">发票金额</text>
+        <input type="digit" bindinput='inputWacth' style="{{check&&formData.je!==passdata.je&&passdata.je?'color:#ff0000':''}}"  data-model="je" value="{{formData.je}}" placeholder="请输入发票金额" />
+        <icon  class=".icon"  color="red" type="clear" size="20"  wx:if="{{check&&formData.je!==passdata.je&&passdata.je}}"/>       
+    </view>
+    <view wx:if="{{check&&formData.je!==passdata.je&&passdata.je}}">
+        <text style="opacity: 0;">发票金额</text>
+        <input style="border-left:none" disabled value="{{passdata.je}}" />
+        <icon type="success" size="20"/>
+    </view>
+    <view>
+        <text>税率(%)</text>
+        <input  bindinput='inputWacth' value="{{formData.sl}}"  style="{{check&&formData.sl!==passdata.sl&&passdata.sl?'color:#ff0000':''}}" type="digit" disabled data-model="sl" placeholder="请选择税率(%)" />
+        <picker  bindchange="choose_type"  value="{{formData.sl}}" data-model="sl"  data-type="tax_rate_list"  range="{{info.tax_rate_list}}" >
+            选择
+        </picker>
+        <icon  class=".icon"  class=".icon" color="red" type="clear" size="20"  wx:if="{{check&&formData.sl!==passdata.sl&&passdata.sl}}"/>
+    </view>
+    <view wx:if="{{check&&formData.sl!==passdata.sl&&passdata.sl}}">
+        <text style="opacity: 0;">税率(%)</text>
+        <input style="border-left:none" disabled value="{{passdata.sl}}" />
+        <icon type="success" size="20"/>
+    </view>
+    <view>
+        <text>税额</text>
+        <input type="digit" bindinput='inputWacth' data-model="se"  style="{{check&&formData.se!==passdata.se&&passdata.se?'color:#ff0000':''}}"  value="{{formData.se}}"  placeholder="自动计算" />
+        <icon  class=".icon"  color="red" type="clear" size="20"  wx:if="{{check&&formData.se!==passdata.se&&passdata.se}}"/>
+    </view>
+    <view wx:if="{{check&&formData.se!==passdata.se&&passdata.se}}">
+        <text style="opacity: 0;">税额</text>
+        <input style="border-left:none" disabled value="{{passdata.se}}" />
+        <icon type="success" size="20"/>
+    </view>
+    <view>
+        <text>价税合计</text>
+        <input type="digit" bindinput='inputWacth' style="{{check&&formData.hj!==passdata.hj&&passdata.hj?'color:#ff0000':''}}" data-model="hj" value="{{formData.hj}}"    placeholder="自动计算" />
+        <icon  class=".icon"  color="red" type="clear" size="20"  wx:if="{{check&&formData.hj!==passdata.hj&&passdata.hj}}"/>
+    </view>
+    <view wx:if="{{check&&formData.hj!==passdata.hj&&passdata.hj}}">
+        <text style="opacity: 0;">价税合计</text>
+        <input style="border-left:none" disabled value="{{passdata.hj}}" />
+        <icon type="success" size="20"/>
+    </view>
+    <view>
+        <text>销方名称</text>
+        <input type="text" bindinput='inputWacth' style="{{check&&formData.xfmc!==passdata.xfmc&&passdata.xfmc?'color:#ff0000':''}}"  data-model="xfmc" value="{{formData.xfmc}}" placeholder="请输入销方名称" />
+        <picker  bindchange="choose_type"  value="{{formData.xfmc}}" data-model="xfmc"  data-type="seller_name_list" range="{{info.seller_name_list}}"  >
+            历史
+        </picker>
+        <icon  class=".icon"  color="red" type="clear" size="20"  wx:if="{{check&&formData.xfmc!==passdata.xfmc&&passdata.xfmc}}"/>
+    </view>
+    <view  wx:if="{{check&&formData.xfmc!==passdata.xfmc&&passdata.xfmc}}">
+        <text style="opacity: 0;">销方名称</text>
+        <input style="border-left:none" disabled value="{{passdata.xfmc}}" />
+        <icon type="success" size="20"/>
+    </view>
+    <view>
+        <text>销方税号</text>
+        <input type="text" bindinput='inputWacth' data-model="xfsbh" value="{{formData.xfsbh}}"  style="{{check&&formData.xfsbh!==passdata.xfsbh&&passdata.xfsbh?'color:#ff0000':''}}" placeholder="请输入销方税号" />
+        <icon  class=".icon"  wx:if="{{check&&formData.xfsbh!==passdata.xfsbh&&passdata.xfsbh}}" color="red" type="clear" size="20"/>
+    </view>
+    <view wx:if="{{check&&formData.xfsbh!==passdata.xfsbh&&passdata.xfsbh}}">
+        <text style="opacity: 0;">销方税号</text>
+        <input style="border-left:none" disabled value="{{passdata.xfsbh}}" />
+        <icon type="success" size="20"/>
+    </view>
+    <view>
+        <text>购方名称</text>
+        <input type="text"  bindinput='inputWacth' style="{{check&&formData.gfmc!==passdata.gfmc&&passdata.gfmc?'color:#ff0000':''}}" data-model="gfmc" value="{{formData.gfmc}}" placeholder="请输入购方名称" />
+        <picker  bindchange="choose_type"  value="{{formData.gfmc}}" data-model="gfmc"  data-type="purchaser_name_list" range="{{info.purchaser_name_list}}" >
+            选择
+        </picker>
+        <icon  class=".icon"  wx:if="{{check&&formData.gfmc!==passdata.gfmc&&passdata.gfmc}}" color="red" type="clear" size="20"/>
+    </view>
+    <view wx:if="{{check&&formData.gfmc!==passdata.gfmc&&passdata.gfmc}}">
+        <text style="opacity: 0;">购方名称</text>
+        <input style="border-left:none" disabled value="{{passdata.gfmc}}" />
+        <icon type="success" size="20"/>
+    </view>
+    <view>
+        <text>购方税号</text>
+        <input type="text"  style="{{check&&formData.gfsbh!==passdata.gfsbh&&passdata.gfsbh?'color:#ff0000':''}}" bindinput='inputWacth' data-model="gfsbh" value="{{formData.gfsbh}}"  placeholder="请输入购方税号" />   
+        <icon  class=".icon"  wx:if="{{check&&formData.gfsbh!==passdata.gfsbh&&passdata.gfsbh}}" color="red" type="clear" size="20"/>    
+    </view>
+    <view wx:if="{{check&&formData.gfsbh!==passdata.gfsbh&&passdata.gfsbh}}">
+        <text style="opacity: 0;">购方税号</text>
+        <input style="border-left:none" disabled value="{{passdata.gfsbh}}" />
+        <icon type="success" size="20"/>
+    </view>
+  </view>
+  <view class="inpts">
+      <view class="upload" wx:if="{{!file&&!src.length}}">
+          <text>发票原件</text>
+          <input disabled />
+          <view class="flex" style="position: absolute;z-index: 999;">
+              <view  catchtap="camera" ><image src="{{tools.img+'fpcc_xiangji@2x.png'}}"></image><text>拍照/相册</text></view>
+              <view catchtap="uploadpdf"><image src="{{tools.img+'fpcc_weixin@2x.png'}}"></image><text>微信导入</text></view>
+          </view>
+      </view>
+      <view class="flex del" wx:else="{{!file&&!src.length}}">
+          <view  bindtap="clickImg" >发票原件.jpg（点击预览）</view>
+          <text bindtap="cansle">移除</text>
+      </view>
+  </view>
+  <view class="inpts">
+    <view>
+        <text>报销人员</text>
+        <input type="text" bindinput='inputWacth' data-model="bxry" value="{{formData.bxry}}" placeholder="请输入报销人员" />
+        <!-- <picker  bindchange="choose_type"   value="{{formData.bxry}}" data-model="bxry"  data-type="reimbursement_personnel_list"  range="{{info.reimbursement_personnel_list}}" >
+            历史
+        </picker> -->
+    </view>
+    <view>
+        <text>报销公司</text>
+        <input type="text" bindinput='inputWacth' data-model="bxgs" disabled value="{{formData.bxgs}}" placeholder="请选择报销公司" />
+        <picker  bindchange="choose_type"  value="{{formData.bxgs}}" data-model="bxgs"  data-type="purchaser_name_list"   range="{{info.purchaser_name_list}}" >
+            选择
+        </picker>
+    </view>
+    <view>
+        <text>报销部门</text>
+        <input type="text"bindinput='inputWacth' data-model="bxbm" disabled value="{{formData.bxbm}}" placeholder="请选择报销部门" />
+        <picker  bindchange="choose_type" data-model="bxbm" data-type="bxbmlist" value="{{formData.bxbm}}"  range="{{info.bxbmlist}}" >
+            选择
+        </picker>
+    </view>
+    <view>
+        <text>报销凭证</text>
+        <input type="text"  bindinput='inputWacth' data-model="bxpz" value="{{formData.bxpz}}"  placeholder="请输入报销凭证" />
+    </view>
+    <view>
+        <text>项目摘要</text>
+        <input type="text"  bindinput='inputWacth' data-model="zy" value="{{formData.zy}}" placeholder="请输入项目摘要" />
+    </view>
+    <view>
+        <text>费用类型</text>
+        <input type="text" bindinput='inputWacth' data-model="fylx" value="{{formData.fylx}}"  placeholder="请输入费用类型" />
+        <picker  bindchange="choose_type"  data-type="expense_type_list"  data-model="fylx" value="{{formData.fylx}}" range="{{info.expense_type_list}}" >
+            选择
+        </picker>
+    </view>
+    <view>
+        <text>备注</text>
+        <input type="text"  bindinput='inputWacth' data-model="bz" value="{{formData.bz}}" placeholder="请输入备注" />
+    </view>  
+  </view>
+  <view class="btn flex" style="box-sizing: border-box;padding: 20rpx 20rpx;z-index: 9999;">
+      <view bindtap="checktrue" style="{{check==true?'width: 300rpx;background: #999;':'width: 300rpx;background: #FF9F06;'}}">查验真伪</view>
+      <view style="width: 378rpx;" bindtap="submit_repeat">录入（查重）</view>
+  </view>
+  <image src="{{item.is_verification==1?tools.img+img:item.is_verification==2?tools.img+'yz_zc@2x.png':tools.img+'yz_yc@2x.png'}}" style="position: fixed;right: 0;top: 140rpx;width: 280rpx;height: 200rpx;"></image>
+</view>

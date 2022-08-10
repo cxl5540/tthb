@@ -1,0 +1,91 @@
+page{
+  background: rgba(63,181,162,0.1);
+}
+.container{
+  .hed{ 
+    padding: 30rpx 20rpx;
+    >view{
+      >text{
+        height: 54rpx;
+        background: #D3F1FF;
+        border-radius: 5rpx;
+        color: #0097DE;
+        padding: 10rpx;
+        margin-left: 20rpx;
+      }
+    }
+  }
+  .inpts{
+    background: #ffffff;
+    border-radius: 10rpx;
+    >view{
+     display: flex;
+     box-sizing: border-box;
+     padding: 30rpx 20rpx;
+     border-bottom: 1px solid #eee;
+     >text{
+       flex: 0.25;
+     }
+     >input{
+      flex: 0.75;
+      position: relative;
+      padding: 0 0 0 40rpx;
+      border-left: 1px solid #E5E5E5;
+     }
+    }
+  }
+  .concat{
+    width: 100%;
+    background: #FFFFFF;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    padding: 20rpx;
+    z-index: 10;
+    >button{
+    height: 72rpx;
+    width: 702rpx;
+    margin: auto;
+    border: 1px solid #3FB5A2;
+    border-radius: 10rpx;
+    line-height: 72rpx;
+    color: #3CA897;
+    background: rgba(68,198,173,0.2);
+    >image{
+      width: 36rpx;
+      height: 36rpx;
+      vertical-align: sub;
+      margin-right: 10rpx;
+    }
+    }
+  }
+}
+.content{
+  background: #ffffff;
+  box-sizing: border-box;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  >.flex{
+    background: rgba(106,154,196,0.1);
+    box-sizing: border-box;
+    padding: 20rpx;
+    margin-top: 10rpx;
+    >view{
+      width:440rpx;
+      height: 160rpx;
+      position: relative;
+      >view{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        >text{
+          color: #E00000;
+          font-size: 36rpx;
+        }
+      }
+    }
+  }
+}

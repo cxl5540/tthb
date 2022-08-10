@@ -1,0 +1,48 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container">
+  <view class="hed flex">
+      <text class="bold">加购授权</text>
+      <view><text>已完成</text></view>
+  </view>
+  <view class="inpts wh">
+      <view>
+          <text>会计数</text>
+          <input type="text" value="{{1}}"  />
+      </view>
+      <view>
+          <text>员工数</text>
+          <input type="text" />
+      </view>
+      <view>
+          <text>扫码模块</text>
+          <input type="text"  />
+      </view>
+      <view>
+          <text>OCR识别</text>
+          <input type="text"  />
+      </view>
+      <view>
+          <text>验真查验</text>
+          <input type="text"  />
+      </view>
+      <text style="display: inline-block;text-align: right;padding: 20rpx 0;width: 94%;">合计：<text style="color: red;font-size:36rpx">¥99</text></text>
+  </view>
+  <view class="wh bold" style="margin: 30rpx auto;">订单信息</view>
+  <view class="inpts wh">
+      <view>
+          <text>订单编号</text>
+          <input type="text" value="{{1}}" />
+      </view>
+      <view>
+          <text>购买日期</text>
+          <input type="text"  />
+      </view>
+      <view>
+          <text>购买人</text>
+          <input type="text"  />
+      </view>
+  </view>
+  <view class="concat">
+      <button open-type="contact"><image src="{{tools.img+'sy_icon_kefu@2x.png'}}"></image>7*24小时在线客服，竭诚为您服务</button>
+  </view>
+</view>

@@ -1,0 +1,158 @@
+.container > .hed > view {
+  display: flex;
+  justify-content: space-between;
+}
+.container > .hed > .search {
+  height: 72rpx;
+  margin-top: 30rpx;
+}
+.container > .hed > .search > view {
+  background-color: rgba(47, 140, 125, 0.1);
+  border-radius: 36rpx;
+}
+.container > .hed > .search > view:nth-child(1) {
+  width: 170rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.container > .hed > .search > view:nth-child(1) image {
+  width: 18rpx;
+  height: 18rpx;
+}
+.container > .hed > .search > view:nth-child(2) {
+  width: 520rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container > .hed > .search > view:nth-child(2) > input {
+  width: 85%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-right: 30rpx;
+}
+.container > .hed > .search > view:nth-child(2) image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 30rpx;
+}
+.container > .hed .data_c {
+  margin-top: 30rpx;
+}
+.container > .hed .data_c .date {
+  height: 88rpx;
+  width: 457rpx;
+  box-shadow: 0px 0px 15rpx 0px rgba(40, 112, 105, 0.2);
+  border-radius: 10rpx;
+  line-height: 88rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.container > .hed .data_c .date .picker > image {
+  width: 32rpx;
+  height: 32rpx;
+  vertical-align: sub;
+  margin-left: 20rpx;
+}
+.container > .hed .data_c .d_n {
+  width: 220rpx;
+  height: 88rpx;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 15rpx 0px rgba(40, 112, 105, 0.2);
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 88rpx;
+  vertical-align: text-top;
+  margin-right: 10rpx;
+}
+.container > .hed .data_c .d_n > image {
+  width: 32rpx;
+  height: 32rpx;
+}
+.container > .hed > .li_t {
+  justify-content: start;
+  margin: 30rpx 0;
+}
+.container > .hed > .li_t text {
+  margin: 0 10rpx;
+}
+.container > .hed > .li_t image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 20rpx;
+  margin-top: 7rpx;
+}
+.container > .list {
+  padding-bottom: 100rpx;
+}
+.container > .list .item {
+  height: 284rpx;
+  border: 1px solid #D2D2D2;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+}
+.container > .list .item > view {
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.container > .list .item > view:nth-child(1) {
+  background: rgba(237, 237, 237, 0.6);
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.container > .list .item > view:nth-child(1) > view:nth-child(2) {
+  font-size: 24rpx;
+  width: 100rpx;
+  height: 48rpx;
+  background: #FFE5D1;
+  border-radius: 5rpx;
+  text-align: center;
+  line-height: 48rpx;
+}
+.container > .list .item > view:nth-child(1) > view:nth-child(2) image {
+  width: 22rpx;
+  height: 22rpx;
+}
+.container > .list .item .rt {
+  width: 90%;
+}
+.container > .list .item .rt > view:nth-child(1) {
+  margin: 15rpx 0;
+}
+.container > .list .item .rt > view:nth-child(2) text {
+  color: #E00000;
+}
+.container > .list .item .rt > view:nth-child(2) > view {
+  width: 100rpx;
+  height: 44rpx;
+  background: #FFE6E6;
+  text-align: center;
+  border-radius: 5rpx;
+  display: inline-block;
+  margin-left: 10rpx;
+}
+.container > .list .item .rt > view:nth-child(3) {
+  color: #999999;
+  margin: 15rpx 0;
+}
+.container .btns {
+  position: fixed;
+  width: 94%;
+  left: 50%;
+  margin-left: -47%;
+  bottom: 10rpx;
+}
+.container .btns > view {
+  color: #FFFFFF;
+  width: 237rpx;
+  height: 72rpx;
+  background: #44C6AD;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 72rpx;
+}
+.container .btns > view:nth-child(1) {
+  width: 180rpx;
+  background: #FF9F06;
+}

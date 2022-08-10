@@ -1,0 +1,40 @@
+<view class="top wh">
+    <view class="bold">电脑端使用说明</view>
+    <view>
+        <text>1</text>
+        <view>电脑端地址：<text>\n</text> <text style="color: #5FACF0 ;">{{url}}</text><text style="color: #999999;font-size: 24rpx;" bindtap="copy">点击复制</text></view>
+    </view>
+    <view>
+        <text>2</text>
+        <view>电脑端与小程序端数据互通，PC端登录请于下方个人信息处设置登录手机号和密码</view>
+    </view>
+    <view>
+        <text>3</text>
+        <view>使用电脑端，搭配专业的扫描设备体验感更好,若需购买请前往产品购买页面进行购买。</view>
+    </view>
+    <button bindtap="getbuy">点击跳转购买页面</button>
+</view>
+<view class="msg wh">
+  <view class="bold">个人信息设置</view>
+    <view>
+        <view>
+          <text class="need">个人姓名</text>
+          <input bindinput="name" type="text" value="{{name}}" maxlength="10" placeholder="请输入个人姓名" maxlength="10" />
+        </view>
+        <text>注：设置后团队信息、审核信息将展示此名字</text>
+    </view>
+    <view>
+        <view style="position: relative;">
+          <text class="need">联系电话</text>
+          <input type="number" style="flex:0.4" value='{{tel}}' disabled />
+        </view>
+        <text>注：手机号码可以作为PC端的登陆账号使用。<text>\n</text>若首次点击【获取本机号码】失败,请再次点击即可获取成功。</text>
+    </view>
+    <view>
+        <view>
+          <text class="need">PC登录密码</text>
+          <input  bindinput="password" value="{{password}}" maxlength="10" type="password" placeholder="请输入登录密码" />
+        </view>
+    </view>
+    <button bindtap="submit">提交</button>
+</view>

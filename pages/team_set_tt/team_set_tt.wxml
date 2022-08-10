@@ -1,0 +1,9 @@
+<view class="container wh">
+    <view style="margin-top: 30rpx;">会计人员抬头权限设置</view>
+    <view class="list">
+        <view class="flex" wx:for="{{list}}" wx:key="*this">
+          <text>{{item.ti}}</text>
+          <switch checked="{{item.checked}}"  data-checked="{{item.checked}}" color="#44C6AD"  value="{{item.checked}}" bindchange="switch1Change" />
+      </view>
+    </view>
+</view>

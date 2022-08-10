@@ -1,0 +1,13 @@
+<wxs src='../../tools.wxs' module="tools"></wxs>
+<view class="container">
+  <!-- <camera device-position="back" flash="off" binderror="error" style="width: 100%; height:92vh;" wx:if="{{!src}}"></camera>
+  <view wx:if="{{src}}"  style="width: 100%; height:92vh;">
+    <image src="{{src}}"  style="width: 100%; height:92vh;"></image>
+  </view>
+  <view class="flex">
+      <text bindtap="cansle">取消</text>
+      <text bindtap="takePhoto">拍照</text>
+      <text>确定</text>
+  </view> -->
+  <video style="width: 100%;" controls src="{{tools.img+src}}"></video>
+</view>

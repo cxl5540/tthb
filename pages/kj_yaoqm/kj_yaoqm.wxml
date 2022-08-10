@@ -1,0 +1,15 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="top wh">
+  <view style="border-left: 6rpx solid #44C6AD;">会计端说明</view>
+  <view style="margin:30rpx 0">通过“会计端”绑定加入团队的会计，财务人员可通过扫码、导入、填报报销所需电子发票原件及相关信息录入、审核员工报销信息，导出报表信息等。</view>
+</view>
+<view class="concat wh">
+  <view style="border-left: 6rpx solid #44C6AD;">会计端绑定步骤</view>
+  <image style="width:292rpx;height:292rpx;display: block;margin:auto;"  bindtap="clickImg" src="{{tools.img+'kj_qrcode.jpg'}}"></image>
+  <view style="margin:30rpx 0;">
+    <view>1.会计识别上方小程序码进入“会计端”。</view>
+    <view>2.会计输入授权码:【{{code}}】加入团队。</view>
+    <view>3.会计在“会计端”录入、审核和导出发票信息。</view>
+  </view>
+  <view style="margin:30rpx 0;color:#999999">小提示：将“会计加入步骤”内容截图发给会计即可!</view>
+</view>

@@ -1,0 +1,53 @@
+<wxs src='../../tools.wxs' module="tools"></wxs>
+<view class="container">
+  <view class="userinfo" style="position: relative;">
+    <block wx:if="{{canIUseOpenData}}">
+      <view >
+        <view class="userinfo-avatar" bindtap="getuser">
+          <view wx:if="{{!uid}}" bindtap="getUserProfile" style="width: 100%;height: 100%;background:#fff;color: #333;line-height: 128rpx;text-align: center;">
+            <image style="width: 100%;height: 100%;" src="../../image/logo.png"></image>        
+          </view>
+          <image wx:if="{{uid}}" style="width: 100%;height: 100%;"  src="{{user_info.head_path}}"></image>
+          <!-- <open-data type="userAvatarUrl"></open-data> -->
+        </view>
+      </view>
+      <view class="msg">
+        <view>{{user_info.name?user_info.name:'未登录'}}
+        </view>
+        <view><text class="v_del" bindtap="rules">查看平台奖励规则</text></view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="num wh">
+  <view>
+    <text class="bold">{{user_info.money_count?user_info.money_count:0}}</text>
+    <view>当前累计红包（元）</view>
+  </view>
+  <view >
+    <text class="bold">{{user_info.gold_count?user_info.gold_count:0}}</text>
+    <view>当前金币数量（个）</view>
+  </view>
+</view>
+<view class="nume wh" style="position: relative;">
+  <view class="i_t flex" wx:for="{{list}}" wx:key="index" bindtap="navurl"  data-url="{{item.url}}" style="position: relative;">
+    <view>
+      <view>{{item.ti}}</view>
+    </view>
+    <!-- <button style="position: absolute;top: 0;left: 0;height: 100%;width: 100%;background:transparent;" wx:if="{{index==2}}" open-type="share"></button> -->
+    <button style="position: absolute;top: 0;left: 0;height: 100%;width: 100%;background:transparent;" wx:if="{{index==4}}" open-type="contact"></button>
+    <mp-icon icon="arrow" color="#999999" size="{{15}}"></mp-icon>
+  </view>
+  <button class="msg" bindtap="getUserProfile" wx:if="{{!uid}}">授权</button>
+</view>
+<view class="model" wx:if="{{show}}">
+    <view class="main">
+      <view><text>红包领取规则</text><image bindtap="close" src="../../image/icon_guanbi.png"></image></view>
+        <view class="content">
+          <view>1、天天红包：每天用户可以通过观看广告领取一次红包，没有人数上限。</view>
+          <view>2、整点金币：每天8:00-22:00期间整点，用户可以通过观看广告领取一次金币，每次金币随机10-500个，没有人数上限。</view>
+          <view>3、商城：好物商城已开放，可用金币或现金购买，购买后请留意物流发货短信。</view>
+          <view>4、分享：通过二维码分享新用户，即可获得平台提供的红包奖励，具体详情可联系商务合作客服咨询。</view>
+        </view>
+    </view>
+</view>

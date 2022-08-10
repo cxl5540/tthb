@@ -1,0 +1,147 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container">
+  <view class="inpts">
+    <view>
+        <text>发票类型</text>
+        <input type="text" value="{{type}}" placeholder="请输入发票类型" />
+        <picker  bindchange="choose_type"  value="{{index}}"  range="{{typeList}}" >
+            选择
+        </picker>
+    </view>
+    <view>
+        <text  class="need">发票代码</text>
+        <input type="text" placeholder="请输入发票代码" />
+    </view>
+    <view>
+        <text  class="need">发票号码</text>
+        <input type="text" placeholder="请输入发票号码" />
+    </view>
+    <view>
+        <text  class="need">发票日期</text>
+        <input type="" placeholder="请输入发票日期" />
+        <picker  bindchange="stdate"  value="{{st_date}}" value="{{index}}"   mode='date'>
+            选择
+        </picker>
+    </view>
+    <view>
+        <text>效验码</text>
+        <input type="text" placeholder="请输入效验码后六位" />
+    </view>
+    <view>
+        <text  class="need">发票金额</text>
+        <input type="text" placeholder="请输入发票金额" />       
+    </view>
+    <view>
+        <text>税率(%)</text>
+        <input type="text" placeholder="请输入税率(%)" />
+        <picker  bindchange="choose_type"  value="{{index}}"  range="{{typeList}}" >
+            选择
+        </picker>
+    </view>
+    <view>
+        <text>税额</text>
+        <input type="text" placeholder="请输入税额" />
+    </view>
+    <view>
+        <text  class="need">价税合计</text>
+        <input type="text" placeholder="请输入税额" />
+    </view>
+    <view>
+        <text>销方名称</text>
+        <input type="text" placeholder="请输入销方名称" />
+        <picker  bindchange="choose_type"  value="{{index}}"  range="{{typeList}}" >
+            历史
+        </picker>
+    </view>
+    <view>
+        <text>销方税号</text>
+        <input type="text" placeholder="请输入销方税号" value="{{'91500113086322499A'}}" />
+        <icon color="red" type="clear" size="20"/>
+    </view>
+    <view>
+        <text style="opacity: 0;">销方税号</text>
+        <input style="border-left:none" type="text" placeholder="请输入销方税号" value="{{'91500113086322499A'}}" />
+        <icon type="success" size="20"/>
+    </view>
+    <view>
+        <text>购方名称</text>
+        <input type="text" placeholder="请输入购方名称" />
+        <picker  bindchange="choose_type"  value="{{index}}"  range="{{typeList}}" >
+            选择
+        </picker>
+    </view>
+    <view>
+        <text>购方税号</text>
+        <input type="text" placeholder="请输入购方税号" />       
+    </view>
+  </view>
+  <view class="inpts">
+      <view class="upload">
+          <text>发票原件</text>
+          <input disabled />
+          <view class="flex">
+              <view><image src="{{tools.img+'fpcc_xiangji@2x.png'}}"></image><text>拍照/相册</text></view>
+              <view><image src="{{tools.img+'fpcc_weixin@2x.png'}}"></image><text>微信导入</text></view>
+          </view>
+      </view>
+  </view>
+  <view class="inpts">
+      <view class="flex del">
+          <view>发票原件.jpg（点击预览）</view>
+          <text style="background: #44C6AD;">移除</text>
+      </view>
+  </view>
+  <view class="inpts">
+    <view>
+        <text class="need">报销人员</text>
+        <input type="text" placeholder="请输入报销人员" />
+        <!-- <picker  bindchange="choose_type"  value="{{index}}"  range="{{typeList}}" >
+            历史
+        </picker> -->
+    </view>
+    <view>
+        <text>报销公司</text>
+        <input type="text" placeholder="请输入报销公司" />
+        <picker  bindchange="choose_type"  value="{{index}}"  range="{{typeList}}" >
+            选择
+        </picker>
+    </view>
+    <view>
+        <text>报销部门</text>
+        <input type="text" placeholder="请输入报销部门" />
+        <picker  bindchange="choose_type"  value="{{index}}"  range="{{typeList}}" >
+            选择
+        </picker>
+    </view>
+    <view>
+        <text>报销凭证</text>
+        <input type="text" placeholder="请输入报销凭证" />
+    </view>
+    <view>
+        <text>项目摘要</text>
+        <input type="text" placeholder="请输入项目摘要" />
+    </view>
+    <view>
+        <text>费用类型</text>
+        <input type="text" placeholder="请输入费用类型" />
+        <picker  bindchange="choose_type"  value="{{index}}"  range="{{typeList}}" >
+            选择
+        </picker>
+    </view>
+    <view>
+        <text>备注</text>
+        <input type="text" placeholder="请输入备注" />
+    </view>
+    <view>   
+        <view class="flex" style="width: 100%;">
+          <text>是否开启连续扫码功能</text>
+          <switch  checked="{{checked}}"  color="#44C6AD"  bindchange="switch1Change" />
+      </view>
+    </view>
+  </view>
+  <view class="btn flex" style="box-sizing: border-box;padding: 20rpx 20rpx;">
+      <view style="width: 300rpx;background: #FF9F06;">查验真伪</view>
+      <view style="width: 378rpx;">录入（查重）</view>
+  </view>
+  <image src="{{tools.img+'yz_wjy@2x.png'}}" style="position: fixed;right: 0;top: 140rpx;width: 280rpx;height: 200rpx;"></image>
+</view>

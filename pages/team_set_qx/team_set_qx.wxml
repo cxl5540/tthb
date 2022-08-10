@@ -1,0 +1,21 @@
+<view class="container wh">
+    <view style="margin-top: 30rpx;">财务人员权限设置</view>
+    <view class="list">
+      <view class="flex">
+          <view>
+            <text>允许TA查看全部台账</text>
+            <view style="font-size: 24rpx;color: #666666;">(抬头权限设置登录PC端进行设置效果更佳)</view>
+          </view>
+          
+          <switch checked="{{is_see}}"  color="#44C6AD"  bindchange="switch1Change" />
+        </view>
+        <view class="flex">
+          <text>允许TA导出台账</text>
+          <switch checked="{{is_export}}"  color="#44C6AD"  bindchange="switch2Change" />
+        </view>
+        <view class="flex">
+          <text>允许TA删除本人录入的发票</text>
+          <switch checked="{{is_delete}}"  color="#44C6AD"  bindchange="switch3Change" />
+        </view>
+    </view>
+</view>

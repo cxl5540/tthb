@@ -1,0 +1,22 @@
+<view class="date-background" hidden="{{flag}}">
+  <view class='date-gray-background' bindtap='hiddeDatePicker'></view>
+  <view class='date-container'>
+    <view>
+      <view class='date-confirm'>
+        <view bindtap='hiddeDatePicker'>取消</view>
+        <view bindtap='_confirm'>确定</view>
+      </view>
+      <picker-view
+        indicator-style="height: 80rpx;"
+        style="width: 100%; height: 430rpx;text-align: center"
+        value="{{setValues}}"
+        bindchange="_bindChange"
+        bindpickend="_bindpickend"
+      >
+        <picker-view-column>
+          <view wx:for="{{items}}" wx:key="*this" style="line-height: 80rpx">{{item.text}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </view>
+</view>

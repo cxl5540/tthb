@@ -1,0 +1,24 @@
+page {
+  background: rgba(47, 140, 125, 0.08);
+}
+.container {
+  margin-top: 20rpx;
+}
+.container > .item {
+  margin: 10rpx 0;
+}
+.container > .item > .flex {
+  align-items: center;
+  background: #ffffff;
+  box-sizing: border-box;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+}
+.container > .item > .flex > view > view {
+  margin-top: 20rpx;
+  color: #666666;
+}
+.container > .item > .flex > view > view > text {
+  color: red;
+}

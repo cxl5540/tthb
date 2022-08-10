@@ -1,0 +1,62 @@
+page {
+  background: rgba(47, 140, 125, 0.08);
+}
+.top,
+.concat {
+  background: #ffffff;
+  border-radius: 10rpx;
+  margin: 30rpx auto;
+  box-sizing: border-box;
+  padding: 30rpx 20rpx;
+}
+.top > view:nth-child(1),
+.concat > view:nth-child(1) {
+  border-left: 6rpx solid #44C6AD;
+  padding-left: 20rpx;
+}
+.top > view {
+  margin-bottom: 20rpx;
+}
+.top > .flex {
+  justify-content: space-around;
+}
+.top > .flex > view {
+  text-align: center;
+}
+.top > .flex > view > image {
+  width: 110rpx;
+  height: 110rpx;
+  display: block;
+  margin: auto;
+}
+.concat > .help {
+  text-align: center;
+}
+.concat > .help > view {
+  background: #ffffff;
+  padding: 20rpx 0;
+  border-radius: 10rpx;
+}
+.concat > .help > view:nth-child(1) > image {
+  width: 270rpx;
+  height: 270rpx;
+}
+.concat > .help > view:nth-child(1) > view:nth-child(2) {
+  color: #999999;
+  font-size: 24rpx;
+}
+.concat > .help > view:nth-child(1) > view:nth-child(3) {
+  width: 478rpx;
+  height: 72rpx;
+  border-radius: 10rpx;
+  background: rgba(68, 198, 173, 0.2);
+  margin: 30rpx auto;
+  line-height: 72rpx;
+  color: #3CA897;
+}
+.concat > .help > view:nth-child(1) > view:nth-child(3) > image {
+  width: 36rpx;
+  height: 36rpx;
+  vertical-align: sub;
+  margin-right: 10rpx;
+}

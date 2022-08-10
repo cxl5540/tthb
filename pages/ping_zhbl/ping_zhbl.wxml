@@ -1,0 +1,71 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container wh">
+   <view class="hed">
+      <view class="search">
+        <!-- <view>{{status}}<image src="../../image/fpda_icon_xiala@2x.png"></image></view> -->
+          <view>
+            <picker  bindchange="choose_type"  value="{{index}}"  range="{{typeList}}" >
+            <view class="picker">
+              {{type}}<image style="margin-left: 10rpx;" src="{{tools.img+'fpda_icon_xiala@2x.png'}}"></image>
+            </view>
+          </picker>
+        </view>
+       
+        <view><image src="{{tools.img+'fpda_icon_sousuo@2x.png'}}"></image><input confirm-type="search"  bindinput="keyval" value="{{key}}" bindconfirm="search" type="text" placeholder="请输入发票代码、号码、报销人进行查询"></input></view>
+      </view>
+      <view class="data_c flex">
+        <view class="date flex">
+        <text>录入时间</text>
+          <picker  bindchange="stdate" fields='month' value="{{st_date}}" mode='date' >
+            <view class="picker">
+              {{st_date}}<image src="{{tools.img+'fpda_icon_rili@2x.png'}}"></image>
+            </view>
+          </picker>
+          ~
+          <picker  bindchange="endate"  fields='month' value="{{en_date}}" mode='date' >
+            <view class="picker">
+              {{en_date}}<image src="{{tools.img+'fpda_icon_rili@2x.png'}}"></image>
+            </view>
+          </picker>
+        </view>
+      </view>
+   </view>
+   <view class="list">
+          <scroll-view
+           scroll-y style="width: 100%; height:{{tabHeiaght}}px;"
+            refresher-enabled="{{true}}"
+            refresher-threshold="{{100}}"
+            refresher-default-style="black"
+            refresher-background=""
+            refresher-triggered="{{triggered}}"
+            bindrefresherpulling="onPulling"
+            bindscrolltolower='scrollToLower'
+            bindrefresherrefresh="onRefresh"
+      >
+            <view class="item" wx:for="{{list}}" wx:key="index">
+              <view class="flex">
+                  <text>{{item.seller_name}}</text>          
+                  <view style="{{item.script_path?'background:#D3F1FF;color:#0097DE':'background:#FFE5D1;color:#FF5A00'}}"><image src="{{item.script_path?tools.img+'icon_dui@2x.png':tools.img+'icon_cuo@2x.png'}}"></image>原件</view>
+              </view>
+              <view class="flex">
+                  <view><radio catchtap="radioval" color="#FF9F06"  data-index="{{index}}" checked="{{item.checked}}"/></view>
+                  <view class="rt">
+                    <view>代码：{{item.invoice_code}} <text style="margin-left:10rpx"> 号码：{{item.invoice_num}}</text></view>
+                    <view><text>￥</text><text class="bold" style="font-size:36rpx">{{item.amount_in_figuers}}</text>(税额：{{item.total_tax}})<view style="{{item.is_verification==1?'background:#EEEEEE;color:#999999E':item.is_verification==2?'background:#E8F9D6;color:#55A500':'background:#FFE6E6;color:#E00000'}}">{{item.is_verification==1?'未验真':item.is_verification==2?'正常':'异常'}}</view></view>
+                    <view class="flex">
+                      <text>提交人：{{item.uname}}</text>
+                      <text>录入时间：{{tools.getstr(item.create_time,11)}}</text>
+                    </view>
+                  </view>
+              </view>             
+            </view>
+            <view class='data-loading' style="text-align: center;">
+               {{is_data?'数据加载中...':'无更多数据...'}} 
+            </view>
+       </scroll-view>
+   </view>
+   <view class="btns flex">
+      <view bindtap="allchcked">{{!checkedall?'全选':'取消全选'}}</view>
+      <view bindtap="submit">批量补录凭证号</view>
+   </view>
+</view>

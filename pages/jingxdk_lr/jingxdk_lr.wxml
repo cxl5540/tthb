@@ -1,0 +1,78 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container wh">
+  <view class="inpts">
+    <view>
+        <text>票据类型</text>
+        <input type="text" value="{{type}}" placeholder="请输入票据类型" />
+        <picker  bindchange="choose_type"  value="{{index}}"  range="{{typeList}}" >
+            选择
+        </picker>
+    </view>
+    <view>
+        <text  class="need">票据号码</text>
+        <input type="text" placeholder="请输入票据号码" />
+    </view>
+    <view>
+        <text>发票日期</text>
+        <input type="地址及电话" placeholder="请输入发票日期" />
+        <picker  bindchange="stdate"  value="{{st_date}}" value="{{index}}"   mode='date'>
+            选择
+        </picker>
+    </view>
+    <view>
+        <text class="need">票面价格</text>
+        <input type="text" placeholder="请输入票面价格" />
+    </view>
+    <view>
+        <text>进项税额</text>
+        <input type="text" placeholder="请输入进项税额" />
+    </view>
+  </view>
+
+  <view class="inpts">
+    <view>
+        <text class="need">票上姓名</text>
+        <input type="text" placeholder="请输入票上姓名" />
+        <picker  bindchange="choose_type"  value="{{index}}"  range="{{typeList}}" >
+            历史
+        </picker>
+    </view>
+    <view>
+        <text>报销公司</text>
+        <input type="text" placeholder="请输入报销公司" />
+        <picker  bindchange="choose_type"  value="{{index}}"  range="{{typeList}}" >
+            选择
+        </picker>
+    </view>
+    <view>
+        <text>报销部门</text>
+        <input type="text" placeholder="请输入报销部门" />
+        <picker  bindchange="choose_type"  value="{{index}}"  range="{{typeList}}" >
+            选择
+        </picker>
+    </view>
+    <view>
+        <text>报销凭证</text>
+        <input type="text" placeholder="请输入报销凭证" />
+    </view>
+    <view>
+        <text>备注</text>
+        <input type="text" placeholder="请输入备注" />
+    </view>
+    <view class="upload">
+        <text>票据留底</text>
+        <input disabled />
+        <view class="flex">
+            <view><image src="{{tools.img+'fpcc_xiangji@2x.png'}}"></image><text>拍照/相册</text></view>
+            <view><image src="{{tools.img+'fpcc_weixin@2x.png'}}"></image><text>微信导入</text></view>
+        </view>
+    </view>
+    <view class="flex del">
+        <view>发票原件.jpg（点击预览）</view>
+        <text>移除</text>
+    </view>
+  </view>
+  <view class="btn">
+      <view class="wh">新增</view>
+  </view>
+</view>

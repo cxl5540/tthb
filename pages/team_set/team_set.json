@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "mp-tabs": "../../components/tabs/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index",
+    "mp-icon": "weui-miniprogram/icon/icon"
+  },
+  "navigationBarTitleText": "团队管理"
+}

@@ -1,0 +1,312 @@
+page{
+  background: rgba(47,140,125,0.08);
+}
+swiper {
+  margin-top: 190rpx;
+}
+.weui-tabs-bar__wrp{
+  position: fixed;
+  top: 104rpx;
+  left: 0;
+  z-index: 99;
+}
+.weui-tabs-bar__content{
+  display: flex;
+  justify-content: space-around;
+}
+.container{
+  background:#EBF7F6;
+  width: 100%;
+  z-index: 100;
+  height: 104rpx;
+  position: fixed;
+  top: 0rpx;
+  left: 0;
+  >.hed{
+    background: #EBF7F6;
+    height: 104rpx;
+    >view{
+      >text{
+        height: 54rpx;
+        background: #3FB5A2;
+        border-radius: 5rpx;
+        color: #ffffff;
+        padding: 10rpx;
+        margin-left: 20rpx;
+      }
+    }
+  }
+}
+.tab-content{
+  padding-bottom: 120rpx;
+  .gmqx,.qiye,.fysm,.smq{ 
+    background: #ffffff;
+    border-radius: 10rpx;
+    margin: 30rpx auto;
+    padding: 20rpx 0 40rpx;
+    >view{
+     margin-top: 10rpx;
+     padding: 0rpx 20rpx 0rpx;
+    }
+    .nums{    
+      >view:nth-child(1){
+        background: rgba(196,159,106,0.1);
+        box-sizing: border-box;
+        padding: 20rpx 20rpx;
+        >view{
+          background: #FFF5DF;
+          border: 1px solid #F8B551;
+          border-radius: 5rpx;
+          color: #D07A00;
+          font-size: 22rpx;
+          padding: 10rpx;
+        }
+      }
+    }
+    .cishu{
+      >view{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        >view:nth-child(2),view:nth-child(5){
+          margin: 10rpx 20rpx 0;
+        }
+        >view{
+          width: 209rpx;
+          height: 120rpx;
+          position: relative;
+          font-size: 26rpx;
+          margin-top: 10rpx;
+          text-align: center;
+          >view{
+            margin-top:30rpx;
+          }
+          >image{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 48rpx;
+            height: 48rpx;
+          }
+        }
+       
+      }
+    }
+  }
+  .bbdb{
+    background: #ffffff;
+    border-radius: 10rpx;
+    margin: 30rpx auto;
+    padding: 20rpx 0 40rpx;
+    >view{
+      margin-top: 10rpx;
+      padding: 0rpx 20rpx 0rpx;
+     }
+     >.list,.qiye{
+       margin-top: 20rpx;
+       >view{
+         margin-top: 6rpx;
+         >view{
+           flex: 1;
+           text-align: center;
+           padding:20rpx 0;
+         }
+         >view:nth-child(1){
+          background: #F5F5F5;
+         }
+         >view:nth-child(3){
+          background: #FEF3E5 ;
+         }
+         >view:nth-child(2){
+          background: #EDEDED;
+         }
+       }
+     }
+  }
+  .qiye{
+    >.list{
+      margin-top: 20rpx;
+      >view:nth-child(2){
+        >view:nth-child(2),view:nth-child(3),view:nth-child(4){
+          color: red;
+          font-size: 34rpx;
+          font-weight: bold;
+        }
+      }
+      >view{
+        margin-top: 6rpx;
+        >view{
+          flex: 1;
+          text-align: center;
+          padding:20rpx 0;
+        }
+        >view:nth-child(1){
+         background: #F5F5F5;
+        }
+        >view:nth-child(4){
+         background: #FEF3E5 ;
+        }
+        >view:nth-child(2){
+         background: #EDEDED;
+        }
+        >view:nth-child(3){
+          background: #E5F2FE;
+         }
+      }
+      .zhekou{     
+        >view{
+          height: 500rpx;
+        }
+        >view:nth-child(2),view:nth-child(3){
+          font-size: 22rpx;
+          color: #666666;
+          >view{
+            margin-top: 10rpx;
+          }
+          >view:nth-last-child(1){
+            margin:10rpx auto 0;
+            width: 117rpx;
+            height: 42rpx;
+            line-height: 42rpx;
+            color: #ffffff;
+            font-weight: bold;
+          }
+        }
+      }
+      .xf{
+        >view{
+          height: 80rpx;
+        }
+        >view:not(:first-child){
+          font-size: 24rpx;
+        //  line-height: 80rpx;
+        }
+      }
+    }
+  }
+  .fysm{
+     .content{
+      >view{
+        margin: 30rpx 0;
+        font-size: 24rpx;
+      }
+     }
+  }
+  .smq{
+    .content{
+      >.flex{
+        background: rgba(106,154,196,0.1);
+        box-sizing: border-box;
+        padding: 20rpx;
+        margin-top: 10rpx;
+        >view{
+          width:440rpx;
+          height: 160rpx;
+          position: relative;
+          >view{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            >text{
+              color: #E00000;
+              font-size: 36rpx;
+            }
+          }
+        }
+      }
+      >.msg{
+        >view{
+          display: flex;
+          box-sizing: border-box;
+          padding: 30rpx 20rpx;
+          // border-bottom: 1px solid #eee;
+          >text{
+            flex: 0.25;
+          }
+          >input{
+           flex: 0.75;
+           position: relative;
+           padding: 0 0 0 40rpx;
+           border-left: 1px solid #E5E5E5;
+          }
+        }        
+      }
+    }
+  }
+}
+.order{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #ffffff;
+  >view{
+    height: 100%;
+    text-align: center;
+  }
+  >view:nth-child(1){
+    line-height: 100rpx;
+    text-align: left;
+    box-sizing: border-box;
+    padding-left: 20rpx;
+    flex: 0.5;
+    background: #ffffff;
+    >text{
+      color: red;
+      font-size: 36rpx;
+    }
+  }
+  >view:nth-child(2){
+    flex: 0.2;
+    background:rgba(68,198,173,0.2);
+    color: #3CA897 ;
+    font-size: 22rpx;
+    >image{
+      margin-top: 10rpx;
+    }
+  }
+  >view:nth-child(3){
+    line-height: 100rpx;
+    font-size: 30rpx;
+    flex: 0.3;
+    background: #44C6AD;
+    color: #ffffff;
+  }
+}
+
+/*加购授权*/
+.del{
+  background: #ffffff;
+  padding: 30rpx 0;
+  >view{
+    background: #F2F2F2 ;
+    box-sizing: border-box;
+    padding: 20rpx;
+    font-size: 24rpx;
+    >view{
+      flex: 1;
+      >text{
+        display: block;
+        margin: 10rpx 0;
+      }
+    }
+  }
+} 
+.buy_jg_fysm{
+  background: rgba(255,0,0,0.08);
+  width: 656rpx;
+  margin: auto;
+  color: red;
+  padding: 20rpx !important;
+  font-size: 24rpx;
+  >view{
+    background: #FFCECE;
+    border: 1px solid #E00000;
+    border-radius: 5px;
+    width: 308rpx;
+    margin: 20rpx auto 0;
+    text-align: center;
+    padding: 10rpx 0;
+  }
+}

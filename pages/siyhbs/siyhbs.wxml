@@ -1,0 +1,35 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="top wh">
+    <view class="bold">私有化部署</view>
+    <view>
+      通过将系统部署在本地或特定服务器，使得所有发票录入信息数据得到私有化保存。数据更安全可控，可实现内外网隔离，局域网+外网办公发挥综合优势。<text>\n</text>私有化部署工作属于专业技术范畴，为保证达到预期效果，建议由单位IT技术部门或软件系统供应商联系我们仅从处理，我们将提供专业的技术指导服务。
+    </view>
+    <view class="flex">
+        <view>
+          <image src="{{tools.img+'syhbs_xxsyh@2x.png'}}"></image>
+          <text>信息私有化</text>
+        </view>
+        <view>
+          <image src="{{tools.img+'syhbs_aqxgg@2x.png'}}"></image>
+          <text>安全性更高</text>
+        </view>
+        <view>
+          <image src="{{tools.img+'syhbs_nwwgj@2x.png'}}"></image>
+          <text>内外网隔离</text>
+        </view>
+    </view>
+</view>
+<view class="concat wh">
+    <view class="bold">联系我们</view>
+    <view class="help">
+        <view>
+            <image src="{{tools.img+'tz2.png'}}" bindtap="clickImg"></image>
+            <view>长按二维码添加微信客服</view>
+            <view style="position: relative;">
+              <image src="{{tools.img+'sy_icon_kefu@2x.png'}}"></image>7*24小时在线客服
+              <button open-type="contact" style="position: absolute;left: 0;top: 0;width: 100%;height: 100%;z-index: 10;background:transparent;"></button>
+            </view>
+            <view>客服电话：<text>{{tools.phone}}</text><text style="color: #999999;margin-left: 10rpx;" bindtap="phone">(点击拨打)</text></view>
+        </view>
+    </view>
+</view>

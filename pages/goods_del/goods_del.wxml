@@ -1,0 +1,36 @@
+<wxs src='../../tools.wxs' module="tools"></wxs>
+<view class="container wh">
+  <view class="pics">
+    <rich-text nodes="{{commodity_info.detail}}"></rich-text>
+  </view>
+
+  <van-popup show="{{ show }}" closeable position="bottom" custom-style="min-height:70%" bind:close="onClose">
+    <view class="content">
+      <view class="adress" wx:if="{{address_info}}">
+       <view>收件人：{{address_info.recipients}} <text>{{address_info.tel}}</text> </view>
+       <view>{{address_info.region}} {{address_info.detail_address}}</view>
+      </view>
+      <view class="title">
+        <image src="{{tools.pic_url+commodity_info.cover}}"></image> {{commodity_info.name}}
+      </view>
+      <view class="type_list">
+          <view wx:if="{{commodity_info.relevance_list.length}}" class="{{activ==index?'active':''}}"  wx:for="{{commodity_info.relevance_list}}" data-item="{{item}}" data-index="{{index}}" bindtap="choosetype"  wx:key="*this">{{item.specification}}</view>
+      </view>
+     
+      <view>      
+        <van-submit-bar  disabled="{{address_info?false:true}}"  button-text="确定" bind:submit="onSubmit" tip="{{ true }}" >
+        <van-tag type="primary">合计:
+          <text wx:if="{{ac_item.type==1}}" style="color:#ee0a24;font-size: 36rpx;margin-right: 40rpx;">￥{{ac_item.price}}</text>
+          <image  wx:if="{{ac_item.type==2}}" style="width: 40rpx;height: 40rpx;vertical-align: sub;" src="../../image/jb.png"></image> <text  wx:if="{{ac_item.type==2}}" style="color:#FF8C00;font-size: 36rpx;margin-right: 40rpx;">{{ac_item.price}}</text>  
+        </van-tag>
+        <view slot="tip" wx:if="{{!address_info}}">您暂无收货地址, <text style="color:#1E90FF;" bindtap="addadress">添加地址</text></view>
+       </van-submit-bar> 
+      </view>
+    </view>
+  </van-popup>
+
+</view>
+<view class="concat flex">
+  <button open-type="contact">在线客服</button>
+  <button bindtap="show_m">立即购买</button>
+</view>
